@@ -48,7 +48,6 @@ A modern, high-converting, and feature-rich event landing page designed and buil
 - 🔔 **Toast Notification System**: Animated system notifications.
 
   <div align="center">
-
   <!-- Live Demo Button -->
   <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Live_Demo-Visit_Website-0070F3?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Demo" />
@@ -57,7 +56,6 @@ A modern, high-converting, and feature-rich event landing page designed and buil
   <br /><br />
 
   <!-- Lighthouse Audit Scores -->
-  <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Performance-97%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Performance: 97%" />
   </a>
   <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
@@ -69,9 +67,7 @@ A modern, high-converting, and feature-rich event landing page designed and buil
   <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/SEO-100%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="SEO: 100%" />
   </a>
-
 </div>
-
 ---
 
 ## 🚀 Live Preview & Local Setup
