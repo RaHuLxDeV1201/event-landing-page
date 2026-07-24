@@ -54,7 +54,8 @@ A modern, high-converting, and feature-rich event landing page designed and buil
   <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/SEO-100%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="SEO: 100%" />
   </a>
-</div>
+</div
+  
 ---
 
 ## 🚀 Live Preview & Local Setup
