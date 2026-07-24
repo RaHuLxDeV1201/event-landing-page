@@ -5,7 +5,7 @@
   <p>A brief, compelling one-line description of what your project does.</p>
 
   <!-- Live Demo Badge Link -->
-  <a href="https://yourwebsite.com" target="_blank" rel="noopener noreferrer">
+  <a href=" https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Live_Demo-Visit_Website-0070F3?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo" />
   </a>
   
