@@ -1,313 +1,758 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="NexusTech Summit 2026 - Premier global tech summit, keynotes, workshops, and 24-hour developer hackathon.">
     <title>NexusTech 2026 | Global Tech & Developer Summit</title>
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/logo.svg?v=2">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
+
     <!-- FontAwesome Vector Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
+    <!-- Ambient Glowing Background Lights -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
     <!-- Sticky Glassmorphic Navbar -->
-    <header class="header">
+    <header class="header" id="mainHeader">
         <div class="nav-container">
-            <a href="#home" class="logo">
-                <i class="fa-solid fa-bolt logo-icon"></i> Nexus<span>Tech</span>
+            <a href="#home" class="logo" id="brandLogo">
+                <div class="logo-badge"><i class="fa-solid fa-bolt"></i></div>
+                <span>Nexus<span class="highlight">Tech</span></span>
             </a>
-            
+
             <nav class="nav-links" id="navLinks">
                 <a href="#home" class="nav-link active">Home</a>
                 <a href="#about" class="nav-link">About</a>
+                <a href="#agenda" class="nav-link">Agenda</a>
                 <a href="#events" class="nav-link">Events</a>
                 <a href="#speakers" class="nav-link">Speakers</a>
+                <a href="#faq" class="nav-link">FAQ</a>
                 <a href="#contact" class="nav-link">Contact</a>
-                <button class="btn btn-nav" onclick="openModal('All Access Pass')">Register Pass</button>
+                <button class="btn btn-nav" onclick="openModal('All Access Pass')">
+                    <span>Register Pass</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
             </nav>
 
             <div class="nav-actions">
                 <!-- Theme Toggle Button (Dark / Light Mode) -->
-                <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Theme">
+                <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Dark and Light Mode"
+                    title="Toggle Theme">
                     <i class="fa-solid fa-moon"></i>
                 </button>
                 <!-- Mobile Hamburger Menu Button -->
-                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Mobile Menu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <div class="hero-badge"><i class="fa-solid fa-star"></i> Annual Flagship Summit 2026</div>
-            <h1 class="hero-title">Shaping the Future of <span class="gradient-text">Intelligence & Web</span></h1>
-            <p class="hero-subtitle">
-                Join 2,500+ developers, AI engineers, and industry pioneers for 3 action-packed days of keynotes, workshops, and high-stakes hackathons.
-            </p>
-            
-            <!-- Live Event Countdown Timer -->
-            <div class="countdown-card">
-                <p class="countdown-title">Summit Commences In:</p>
-                <div class="countdown-timer" id="countdown">
-                    <div class="time-block"><span id="days">00</span><small>Days</small></div>
-                    <div class="time-block"><span id="hours">00</span><small>Hours</small></div>
-                    <div class="time-block"><span id="minutes">00</span><small>Mins</small></div>
-                    <div class="time-block"><span id="seconds">00</span><small>Secs</small></div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <div class="hero-badge-wrapper">
+                    <span class="hero-badge">
+                        <span class="badge-pulse"></span>
+                        <i class="fa-solid fa-sparkles"></i> Flagship Tech Summit 2026 &bull; Oct 15-17
+                    </span>
                 </div>
-            </div>
 
-            <div class="hero-actions">
-                <button class="btn btn-primary btn-large" onclick="openModal('All Access Pass')">
-                    Claim Your Pass <i class="fa-solid fa-arrow-right"></i>
-                </button>
-                <a href="#events" class="btn btn-outline btn-large">Explore Agenda</a>
-            </div>
-        </div>
-    </section>
+                <h1 class="hero-title">
+                    Shaping the Future of <br>
+                    <span class="gradient-text">Intelligence & Distributed Web</span>
+                </h1>
 
-    <!-- About Section -->
-    <section class="about section-padding" id="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-info">
-                    <span class="sub-heading">Who We Are</span>
-                    <h2>Empowering Next-Generation Tech Creators</h2>
-                    <p>
-                        NexusTech is a global event ecosystem dedicated to fostering cross-disciplinary technology collaboration. We connect emerging developers with world-renowned technical leaders to spark innovation.
-                    </p>
-                    <p>
-                        Whether you are building advanced neural networks, high-throughput cloud microservices, or decentralized web platforms, NexusTech provides hands-on learning and direct networking opportunities.
-                    </p>
+                <p class="hero-subtitle">
+                    Join 2,500+ developers, AI researchers, and engineering leaders for 3 intense days of visionary
+                    keynotes, hands-on masterclasses, and a high-stakes $50,000 hackathon.
+                </p>
 
-                    <!-- Key Platform Stats -->
-                    <div class="stats-container">
-                        <div class="stat-card">
-                            <h3>2,500+</h3>
-                            <p>Attendees</p>
+                <!-- Live Event Countdown Timer -->
+                <div class="countdown-card">
+                    <p class="countdown-title"><i class="fa-regular fa-clock"></i> Summit Commences In:</p>
+                    <div class="countdown-timer" id="countdown">
+                        <div class="time-block">
+                            <span id="days">00</span>
+                            <small>Days</small>
                         </div>
-                        <div class="stat-card">
-                            <h3>40+</h3>
-                            <p>Global Speakers</p>
+                        <div class="time-separator">:</div>
+                        <div class="time-block">
+                            <span id="hours">00</span>
+                            <small>Hours</small>
                         </div>
-                        <div class="stat-card">
-                            <h3>24</h3>
-                            <p>Interactive Tracks</p>
+                        <div class="time-separator">:</div>
+                        <div class="time-block">
+                            <span id="minutes">00</span>
+                            <small>Mins</small>
+                        </div>
+                        <div class="time-separator">:</div>
+                        <div class="time-block">
+                            <span id="seconds">00</span>
+                            <small>Secs</small>
                         </div>
                     </div>
                 </div>
 
-                <div class="about-visual">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" alt="NexusTech Summit Conference Hall">
-                        <div class="floating-badge">
-                            <i class="fa-solid fa-trophy"></i>
-                            <div>
-                                <strong>#1 Tech Summit</strong>
-                                <span>Voted Best Tech Event 2025</span>
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-large" onclick="openModal('All Access Pass')">
+                        <span>Claim Your Pass</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <a href="#events" class="btn btn-outline btn-large">
+                        <i class="fa-solid fa-compass"></i> Explore Sessions
+                    </a>
+                </div>
+
+                <!-- Trusted By / Feature Badges -->
+                <div class="hero-trust-bar">
+                    <p>Featuring Tracks from Engineers At:</p>
+                    <div class="trust-logos">
+                        <span><i class="fa-brands fa-google"></i> Google</span>
+                        <span><i class="fa-brands fa-aws"></i> AWS</span>
+                        <span><i class="fa-brands fa-microsoft"></i> Microsoft</span>
+                        <span><i class="fa-brands fa-meta"></i> Meta</span>
+                        <span><i class="fa-brands fa-github"></i> GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section-padding" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-info">
+                        <span class="sub-heading"><i class="fa-solid fa-layer-group"></i> About NexusTech</span>
+                        <h2>Empowering Next-Generation Technology Creators</h2>
+                        <p>
+                            NexusTech is an international summit designed to push the boundaries of technology
+                            innovation. We bridge the gap between groundbreaking academic AI research and enterprise
+                            engineering production.
+                        </p>
+                        <p>
+                            Whether you are training multi-modal LLM models, deploying cloud microservices on
+                            Kubernetes, or pioneering Web3 architectures, our hands-on tracks deliver practical code and
+                            production insights.
+                        </p>
+
+                        <!-- Key Highlights Cards -->
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-brain"></i></div>
+                                <div>
+                                    <h4>AI & LLM Masterclasses</h4>
+                                    <p>Deep-dive workshops into RAG, vector stores, and custom model fine-tuning.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-code-branch"></i></div>
+                                <div>
+                                    <h4>Full-Stack Architecture</h4>
+                                    <p>Serverless edge runtime, reactive UI patterns, and high-throughput databases.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-trophy"></i></div>
+                                <div>
+                                    <h4>$50,000 Hackathon</h4>
+                                    <p>24-hour sprint evaluated live by prominent Silicon Valley tech partners and VCs.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Key Platform Stats -->
+                        <div class="stats-container">
+                            <div class="stat-card">
+                                <h3 class="stat-number" data-target="2500">2,500+</h3>
+                                <p>Attendees</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3 class="stat-number" data-target="45">45+</h3>
+                                <p>Global Speakers</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3 class="stat-number" data-target="24">24</h3>
+                                <p>Tech Tracks</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3>$50K</h3>
+                                <p>Prize Pool</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-visual">
+                        <div class="image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1000&q=80"
+                                alt="NexusTech Summit Conference Hall">
+                            <div class="glass-overlay"></div>
+
+                            <div class="floating-badge badge-top">
+                                <i class="fa-solid fa-award"></i>
+                                <div>
+                                    <strong>#1 Tech Conference</strong>
+                                    <span>Global Developer Choice 2025</span>
+                                </div>
+                            </div>
+
+                            <div class="floating-badge badge-bottom">
+                                <i class="fa-solid fa-users"></i>
+                                <div>
+                                    <strong>Live Networking</strong>
+                                    <span>1-on-1 Founder & Speaker Tables</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Interactive Events Section -->
-    <section class="events section-padding" id="events">
-        <div class="container">
-            <div class="section-header">
-                <span class="sub-heading">Curated Sessions</span>
-                <h2>Explore Flagship Events</h2>
-                <p>Filter by category or search through our keynote presentations, workshops, and hackathons.</p>
-            </div>
-
-            <!-- Event Search & Filtering Controls -->
-            <div class="filter-wrapper">
-                <div class="search-box">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" id="eventSearch" placeholder="Search events by keyword...">
+        <!-- Interactive Summit Agenda Section -->
+        <section class="agenda section-padding" id="agenda">
+            <div class="container">
+                <div class="section-header center-header">
+                    <span class="sub-heading"><i class="fa-regular fa-calendar-days"></i> Master Schedule</span>
+                    <h2>Summit Agenda Overview</h2>
+                    <p>Explore our 3-day schedule packed with keynotes, deep-dive technical sessions, and hands-on build
+                        labs.</p>
                 </div>
-                <div class="filter-tabs">
-                    <button class="filter-btn active" data-category="all">All Events</button>
-                    <button class="filter-btn" data-category="ai">Artificial Intelligence</button>
-                    <button class="filter-btn" data-category="web">Web & Cloud</button>
-                    <button class="filter-btn" data-category="hackathon">Hackathons</button>
+
+                <!-- Agenda Day Navigation Tabs -->
+                <div class="agenda-tabs">
+                    <button class="agenda-tab active" data-day="day1">
+                        <span class="day-number">Day 01</span>
+                        <span class="day-date">Oct 15 &bull; AI & Neural Systems</span>
+                    </button>
+                    <button class="agenda-tab" data-day="day2">
+                        <span class="day-number">Day 02</span>
+                        <span class="day-date">Oct 16 &bull; Web, Cloud & Infra</span>
+                    </button>
+                    <button class="agenda-tab" data-day="day3">
+                        <span class="day-number">Day 03</span>
+                        <span class="day-date">Oct 17 &bull; Hackathon & Demo Day</span>
+                    </button>
                 </div>
-            </div>
 
-            <!-- Events Grid -->
-            <div class="events-grid" id="eventsGrid">
-                <!-- Event Card 1 -->
-                <article class="event-card" data-category="ai">
-                    <div class="card-thumb">
-                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80" alt="Generative AI">
-                        <span class="badge category-badge">Artificial Intelligence</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-meta">
-                            <span><i class="fa-regular fa-calendar"></i> Oct 15, 2026</span>
-                            <span><i class="fa-regular fa-clock"></i> 10:00 AM EST</span>
-                        </div>
-                        <h3>Generative AI & LLM Systems</h3>
-                        <p>Dive deep into multi-modal architectures, custom model fine-tuning, and scalable vector databases.</p>
-                        <div class="card-footer">
-                            <span class="speaker-tag"><i class="fa-solid fa-user-circle"></i> Dr. Aris Thorne</span>
-                            <button class="btn btn-card" onclick="openModal('Generative AI & LLM Systems')">Book Slot</button>
-                        </div>
-                    </div>
-                </article>
+                <!-- Agenda Content Panels -->
+                <div class="agenda-content">
+                    <!-- Day 1 Panel -->
+                    <div class="agenda-panel active" id="day1">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="time-col">09:00 AM - 10:30 AM</div>
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-card">
+                                    <span class="badge badge-accent">Opening Keynote</span>
+                                    <h3>The Dawn of Autonomous Multi-Agent Systems</h3>
+                                    <p>Dr. Aris Thorne unpacks next-generation LLM reasoning architectures and
+                                        autonomous task execution.</p>
+                                    <div class="timeline-meta">
+                                        <span><i class="fa-solid fa-location-dot"></i> Main Stage (Hall A)</span>
+                                        <span><i class="fa-solid fa-user"></i> Dr. Aris Thorne</span>
+                                    </div>
+                                </div>
+                            </div>
 
-                <!-- Event Card 2 -->
-                <article class="event-card" data-category="web">
-                    <div class="card-thumb">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" alt="Full Stack">
-                        <span class="badge category-badge">Web & Cloud</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-meta">
-                            <span><i class="fa-regular fa-calendar"></i> Oct 16, 2026</span>
-                            <span><i class="fa-regular fa-clock"></i> 02:00 PM EST</span>
-                        </div>
-                        <h3>Modern Full-Stack Distributed Web</h3>
-                        <p>Learn reactive architecture, serverless computing, edge functions, and real-time state synchronization.</p>
-                        <div class="card-footer">
-                            <span class="speaker-tag"><i class="fa-solid fa-user-circle"></i> Sarah Jenkins</span>
-                            <button class="btn btn-card" onclick="openModal('Modern Full-Stack Distributed Web')">Book Slot</button>
-                        </div>
-                    </div>
-                </article>
+                            <div class="timeline-item">
+                                <div class="time-col">11:00 AM - 01:00 PM</div>
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-card">
+                                    <span class="badge badge-primary">Workshop</span>
+                                    <h3>Building Production RAG Systems with Vector DBs</h3>
+                                    <p>Hands-on lab constructing high-speed similarity search pipelines and hybrid
+                                        retrieval engines.</p>
+                                    <div class="timeline-meta">
+                                        <span><i class="fa-solid fa-location-dot"></i> Lab Center 3</span>
+                                        <span><i class="fa-solid fa-user"></i> Elena Rostova</span>
+                                    </div>
+                                </div>
+                            </div>
 
-                <!-- Event Card 3 -->
-                <article class="event-card" data-category="hackathon">
-                    <div class="card-thumb">
-                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Hackathon">
-                        <span class="badge category-badge">Hackathons</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-meta">
-                            <span><i class="fa-regular fa-calendar"></i> Oct 17, 2026</span>
-                            <span><i class="fa-regular fa-clock"></i> 24-Hour Blitz</span>
-                        </div>
-                        <h3>Global Developer 24hr Hackathon</h3>
-                        <p>Build innovative open-source solutions with a $50,000 prize pool judged by top industry VCs.</p>
-                        <div class="card-footer">
-                            <span class="speaker-tag"><i class="fa-solid fa-user-circle"></i> Nexus Jury Team</span>
-                            <button class="btn btn-card" onclick="openModal('Global Developer 24hr Hackathon')">Book Slot</button>
+                            <div class="timeline-item">
+                                <div class="time-col">02:30 PM - 04:30 PM</div>
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-card">
+                                    <span class="badge badge-secondary">Panel Discussion</span>
+                                    <h3>Ethics, Safety & Fine-Tuning Open Source LLMs</h3>
+                                    <p>Leading researchers analyze model alignment, synthetic dataset generation, and
+                                        open-weights safety.</p>
+                                    <div class="timeline-meta">
+                                        <span><i class="fa-solid fa-location-dot"></i> Amphitheater B</span>
+                                        <span><i class="fa-solid fa-users"></i> AI Ethics Board Panel</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </article>
 
-                <!-- Event Card 4 -->
-                <article class="event-card" data-category="web">
-                    <div class="card-thumb">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="Cloud Infrastructure">
-                        <span class="badge category-badge">Web & Cloud</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-meta">
-                            <span><i class="fa-regular fa-calendar"></i> Oct 16, 2026</span>
-                            <span><i class="fa-regular fa-clock"></i> 11:30 AM EST</span>
-                        </div>
-                        <h3>Cloud Native & Kubernetes Resilience</h3>
-                        <p>Master Kubernetes, zero-trust container security, service meshes, and automated deployment pipelines.</p>
-                        <div class="card-footer">
-                            <span class="speaker-tag"><i class="fa-solid fa-user-circle"></i> Marcus Vance</span>
-                            <button class="btn btn-card" onclick="openModal('Cloud Native & Kubernetes Resilience')">Book Slot</button>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            
-            <div id="noEventsMsg" class="no-results hidden">
-                <i class="fa-solid fa-circle-exclamation"></i> No events match your search criteria.
-            </div>
-        </div>
-    </section>
+                    <!-- Day 2 Panel -->
+                    <div class="agenda-panel" id="day2">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="time-col">09:30 AM - 11:00 AM</div>
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-card">
+                                    <span class="badge badge-accent">Tech Keynote</span>
+                                    <h3>Modern Full-Stack Edge & Micro-Frontend Architecture</h3>
+                                    <p>Sarah Jenkins explores zero-latency web rendering, distributed edge state, and
+                                        island architecture.</p>
+                                    <div class="timeline-meta">
+                                        <span><i class="fa-solid fa-location-dot"></i> Main Stage (Hall A)</span>
+                                        <span><i class="fa-solid fa-user"></i> Sarah Jenkins</span>
+                                    </div>
+                                </div>
+                            </div>
 
-    <!-- Key Speakers Section -->
-    <section class="speakers section-padding" id="speakers">
-        <div class="container">
-            <div class="section-header">
-                <span class="sub-heading">World-Class Mentors</span>
-                <h2>Keynote Speakers</h2>
-                <p>Hear from industry executives, top-cited researchers, and prolific open-source creators.</p>
-            </div>
+                            <div class="timeline-item">
+                                <div class="time-col">11:30 AM - 01:30 PM</div>
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-card">
+                                    <span class="badge badge-primary">Deep Dive</span>
+                                    <h3>Kubernetes Zero-Trust Security & Service Mesh</h3>
+                                    <p>Architecting resilient cloud infrastructure with Envoy, eBPF telemetry, and
+                                        container runtime guards.</p>
+                                    <div class="timeline-meta">
+                                        <span><i class="fa-solid fa-location-dot"></i> Cloud Room 201</span>
+                                        <span><i class="fa-solid fa-user"></i> Marcus Vance</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="speakers-grid">
-                <div class="speaker-card">
-                    <div class="speaker-avatar">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Speaker Dr. Aris Thorne">
+                    <!-- Day 3 Panel -->
+                    <div class="agenda-panel" id="day3">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="time-col">09:00 AM - 09:00 AM (Next Day)</div>
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-card highlight-card">
+                                    <span class="badge badge-danger">24-Hour Sprint</span>
+                                    <h3>Nexus Global Hackathon Blitz</h3>
+                                    <p>Teams code overnight to build innovative AI & Web apps. Mentors and API credits
+                                        provided live on site.</p>
+                                    <div class="timeline-meta">
+                                        <span><i class="fa-solid fa-location-dot"></i> Hackathon Pavilion</span>
+                                        <span><i class="fa-solid fa-trophy"></i> $50,000 Total Prizes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Dr. Aris Thorne</h3>
-                    <p class="speaker-role">Lead AI Researcher, Synapse Labs</p>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Speaker Sarah Jenkins">
-                    </div>
-                    <h3>Sarah Jenkins</h3>
-                    <p class="speaker-role">VP of Engineering, CloudScale</p>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Speaker Marcus Vance">
-                    </div>
-                    <h3>Marcus Vance</h3>
-                    <p class="speaker-role">Principal Systems Architect, DevCore</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact & Location Section -->
-    <section class="contact section-padding" id="contact">
-        <div class="container">
-            <div class="contact-box">
-                <div class="contact-text">
-                    <h2>Need Personalized Assistance?</h2>
-                    <p>Have questions about group tickets, student discounts, or booth sponsorships? Get in touch with our operations team.</p>
-                    <div class="contact-details">
-                        <div><i class="fa-solid fa-envelope"></i> summit@nexustech2026.org</div>
-                        <div><i class="fa-solid fa-phone"></i> +1 (800) 555-NEXUS</div>
-                        <div><i class="fa-solid fa-location-dot"></i> Tech Convention Center, San Francisco, CA</div>
+        <!-- Interactive Events Section -->
+        <section class="events section-padding" id="events">
+            <div class="container">
+                <div class="section-header">
+                    <span class="sub-heading"><i class="fa-solid fa-ticket"></i> Curated Sessions</span>
+                    <h2>Featured Events & Workshops</h2>
+                    <p>Filter by domain or search for specific technologies to reserve your seat in advance.</p>
+                </div>
+
+                <!-- Event Search & Filtering Controls -->
+                <div class="filter-wrapper">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" id="eventSearch" placeholder="Search by topic, speaker, or tech stack..."
+                            aria-label="Search events">
+                        <button class="clear-search hidden" id="clearSearchBtn" aria-label="Clear Search"><i
+                                class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="filter-tabs">
+                        <button class="filter-btn active" data-category="all">All Events <span class="count-badge"
+                                id="countAll">4</span></button>
+                        <button class="filter-btn" data-category="ai">Artificial Intelligence <span class="count-badge"
+                                id="countAi">1</span></button>
+                        <button class="filter-btn" data-category="web">Web & Cloud <span class="count-badge"
+                                id="countWeb">2</span></button>
+                        <button class="filter-btn" data-category="hackathon">Hackathon <span class="count-badge"
+                                id="countHackathon">1</span></button>
                     </div>
                 </div>
-                <div class="contact-cta">
-                    <h3>Get Regular Updates</h3>
-                    <p>Subscribe to our newsletter for early-bird pass discounts.</p>
-                    <form class="newsletter-form" onsubmit="handleNewsletter(event)">
-                        <input type="email" placeholder="Enter your work email" required>
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
-                    </form>
+
+                <!-- Events Grid -->
+                <div class="events-grid" id="eventsGrid">
+                    <!-- Event Card 1 -->
+                    <article class="event-card" data-category="ai">
+                        <div class="card-thumb">
+                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80"
+                                alt="Generative AI Systems">
+                            <span class="badge category-badge">Artificial Intelligence</span>
+                            <span class="seats-left-badge"><i class="fa-solid fa-fire"></i> 14 Seats Left</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Oct 15, 2026</span>
+                                <span><i class="fa-regular fa-clock"></i> 10:00 AM EST</span>
+                            </div>
+                            <h3>Generative AI & LLM Systems</h3>
+                            <p>Master multi-modal model fine-tuning, latency optimization, vector embeddings, and
+                                enterprise agent workflows.</p>
+                            <div class="card-footer">
+                                <div class="speaker-tag">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80"
+                                        alt="Dr. Aris Thorne">
+                                    <span>Dr. Aris Thorne</span>
+                                </div>
+                                <button class="btn btn-card" onclick="openModal('Generative AI & LLM Systems')">
+                                    Book Slot <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Event Card 2 -->
+                    <article class="event-card" data-category="web">
+                        <div class="card-thumb">
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80"
+                                alt="Full Stack Web">
+                            <span class="badge category-badge">Web & Cloud</span>
+                            <span class="seats-left-badge"><i class="fa-solid fa-fire"></i> 8 Seats Left</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Oct 16, 2026</span>
+                                <span><i class="fa-regular fa-clock"></i> 02:00 PM EST</span>
+                            </div>
+                            <h3>Modern Full-Stack Distributed Web</h3>
+                            <p>Learn serverless streaming, reactive state management, edge computing, and real-time
+                                multiplayer web synchronization.</p>
+                            <div class="card-footer">
+                                <div class="speaker-tag">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
+                                        alt="Sarah Jenkins">
+                                    <span>Sarah Jenkins</span>
+                                </div>
+                                <button class="btn btn-card" onclick="openModal('Modern Full-Stack Distributed Web')">
+                                    Book Slot <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Event Card 3 -->
+                    <article class="event-card" data-category="hackathon">
+                        <div class="card-thumb">
+                            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+                                alt="Global Hackathon">
+                            <span class="badge category-badge danger-badge">Hackathon</span>
+                            <span class="seats-left-badge"><i class="fa-solid fa-bolt"></i> High Demand</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Oct 17, 2026</span>
+                                <span><i class="fa-regular fa-clock"></i> 24-Hour Marathon</span>
+                            </div>
+                            <h3>Global Developer 24hr Hackathon</h3>
+                            <p>Compete to build groundbreaking open-source tools with $50,000 in cash prizes, cloud
+                                credits, and VC pitch meetings.</p>
+                            <div class="card-footer">
+                                <div class="speaker-tag">
+                                    <div class="mini-avatar-group">
+                                        <i class="fa-solid fa-users"></i>
+                                    </div>
+                                    <span>Nexus Jury Panel</span>
+                                </div>
+                                <button class="btn btn-card" onclick="openModal('Global Developer 24hr Hackathon')">
+                                    Book Slot <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Event Card 4 -->
+                    <article class="event-card" data-category="web">
+                        <div class="card-thumb">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
+                                alt="Cloud Native Infrastructure">
+                            <span class="badge category-badge">Web & Cloud</span>
+                            <span class="seats-left-badge"><i class="fa-solid fa-check"></i> Registration Open</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Oct 16, 2026</span>
+                                <span><i class="fa-regular fa-clock"></i> 11:30 AM EST</span>
+                            </div>
+                            <h3>Cloud Native & Kubernetes Resilience</h3>
+                            <p>Master Kubernetes, service mesh architectures, automated failovers, zero-trust security,
+                                and CI/CD pipelines.</p>
+                            <div class="card-footer">
+                                <div class="speaker-tag">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80"
+                                        alt="Marcus Vance">
+                                    <span>Marcus Vance</span>
+                                </div>
+                                <button class="btn btn-card"
+                                    onclick="openModal('Cloud Native & Kubernetes Resilience')">
+                                    Book Slot <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Empty State Message -->
+                <div id="noEventsMsg" class="no-results hidden">
+                    <div class="no-results-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <h3>No Matching Events Found</h3>
+                    <p>Try adjusting your search criteria or switching category filters.</p>
+                    <button class="btn btn-outline" id="resetFiltersBtn">Reset Filters</button>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Key Speakers Section -->
+        <section class="speakers section-padding" id="speakers">
+            <div class="container">
+                <div class="section-header">
+                    <span class="sub-heading"><i class="fa-solid fa-microphone"></i> Visionary Thought Leaders</span>
+                    <h2>Featured Keynote Speakers</h2>
+                    <p>Engage directly with global researchers, open-source creators, and enterprise architects.</p>
+                </div>
+
+                <div class="speakers-grid">
+                    <!-- Speaker 1 -->
+                    <div class="speaker-card">
+                        <div class="speaker-avatar">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80"
+                                alt="Dr. Aris Thorne">
+                            <div class="speaker-socials">
+                                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="speaker-content">
+                            <h3>Dr. Aris Thorne</h3>
+                            <p class="speaker-role">Lead AI Researcher, Synapse AI</p>
+                            <p class="speaker-bio">Pioneer in self-reasoning agent architectures and synthetic training
+                                dataset alignment.</p>
+                            <span class="speaker-topic"><i class="fa-solid fa-tag"></i> AI Keynote</span>
+                        </div>
+                    </div>
+
+                    <!-- Speaker 2 -->
+                    <div class="speaker-card">
+                        <div class="speaker-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80"
+                                alt="Sarah Jenkins">
+                            <div class="speaker-socials">
+                                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="speaker-content">
+                            <h3>Sarah Jenkins</h3>
+                            <p class="speaker-role">VP of Engineering, CloudScale</p>
+                            <p class="speaker-bio">Spearheaded ultra-low-latency edge delivery serving 100M+ concurrent
+                                users.</p>
+                            <span class="speaker-topic"><i class="fa-solid fa-tag"></i> Web Architecture</span>
+                        </div>
+                    </div>
+
+                    <!-- Speaker 3 -->
+                    <div class="speaker-card">
+                        <div class="speaker-avatar">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80"
+                                alt="Marcus Vance">
+                            <div class="speaker-socials">
+                                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="speaker-content">
+                            <h3>Marcus Vance</h3>
+                            <p class="speaker-role">Principal Systems Architect, DevCore</p>
+                            <p class="speaker-bio">Expert in zero-trust mesh containerization and distributed Kubernetes
+                                observability.</p>
+                            <span class="speaker-topic"><i class="fa-solid fa-tag"></i> Cloud Native</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq section-padding" id="faq">
+            <div class="container">
+                <div class="section-header center-header">
+                    <span class="sub-heading"><i class="fa-solid fa-circle-question"></i> Answers & Support</span>
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Everything you need to know about attendance, pass tiers, and event logistics.</p>
+                </div>
+
+                <div class="faq-accordion">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What does the All Access Pass include?</span>
+                            <i class="fa-solid fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The All Access Pass provides entry to all 3 summit days, including keynote speeches,
+                                hands-on technical workshops, direct entry to the 24-Hour Hackathon, VIP networking
+                                lunches, and access to all recorded session archives post-event.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Can I participate in the 24-Hour Hackathon remotely?</span>
+                            <i class="fa-solid fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! We offer a hybrid hackathon format. Remote participants receive full access to our
+                                Discord developer lobby, live mentor drop-in channels, and digital API key allocations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Are student or group discounts available?</span>
+                            <i class="fa-solid fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely. We offer a 50% discount for verified university students and a 20% discount
+                                for engineering team groups of 5 or more. Contact our support team via the form below
+                                for custom promo codes.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Will session recordings be available after the summit?</span>
+                            <i class="fa-solid fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, all keynote speeches and technical workshops will be recorded in 4K resolution and
+                                published on the attendee portal within 48 hours following the summit conclusion.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Newsletter Section -->
+        <section class="contact section-padding" id="contact">
+            <div class="container">
+                <div class="contact-card-wrapper">
+                    <div class="contact-info-col">
+                        <span class="sub-heading light-heading"><i class="fa-solid fa-headset"></i> Get In Touch</span>
+                        <h2>Have Questions or Need Group Assistance?</h2>
+                        <p>Our operations team is here to assist with corporate sponsorships, ticket transfers, or venue
+                            accommodations.</p>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <small>Email Inquiries</small>
+                                    <strong>summit@nexustech2026.org</strong>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div>
+                                    <small>Phone Support</small>
+                                    <strong>+1 (800) 555-NEXUS</strong>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <small>Summit Venue</small>
+                                    <strong>Moscone Tech Center, San Francisco, CA</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-newsletter-col">
+                        <h3>Stay Ahead of the Tech Curve</h3>
+                        <p>Subscribe for speaker announcements, early-bird ticket releases, and hackathon prompt drops.
+                        </p>
+
+                        <form class="newsletter-form" id="newsletterForm" novalidate>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input type="email" id="newsletterEmail" placeholder="Enter your work email address..."
+                                    required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <span>Subscribe for Updates</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-brand">
                 <a href="#home" class="logo">
-                    <i class="fa-solid fa-bolt logo-icon"></i> Nexus<span>Tech</span>
+                    <div class="logo-badge"><i class="fa-solid fa-bolt"></i></div>
+                    <span>Nexus<span class="highlight">Tech</span></span>
                 </a>
-                <p>Building the premiere platform for technology innovators and developers global summit 2026.</p>
+                <p>The global developer flagship event shaping artificial intelligence, high-performance web systems,
+                    and open-source innovation.</p>
             </div>
-            <div class="footer-links">
+
+            <div class="footer-col">
                 <h4>Navigation</h4>
                 <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#events">Events</a>
-                <a href="#speakers">Speakers</a>
+                <a href="#about">About Summit</a>
+                <a href="#agenda">Master Schedule</a>
+                <a href="#events">Flagship Events</a>
             </div>
-            <div class="footer-socials">
-                <h4>Connect With Us</h4>
+
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <a href="#speakers">Speakers</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Support</a>
+                <a href="#" onclick="openModal('All Access Pass'); return false;">Register Ticket</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Connect</h4>
                 <div class="social-links">
                     <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
                     <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
@@ -316,22 +761,30 @@
                 </div>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2026 NexusTech Summit. Built for MLCOE Web Development Evaluation.</p>
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 NexusTech Summit. Built for Machine Learning Centre of Excellence (MLCOE) Evaluation.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span>&bull;</span>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <!-- Interactive Registration Modal Dialog -->
-    <div class="modal-overlay" id="registrationModal" aria-hidden="true">
+    <div class="modal-overlay" id="registrationModal" aria-hidden="true" role="dialog" aria-modal="true">
         <div class="modal-card">
-            <button class="modal-close-btn" id="closeModalBtn" aria-label="Close Modal">&times;</button>
+            <button class="modal-close-btn" id="closeModalBtn" aria-label="Close Registration Modal">&times;</button>
+
             <div class="modal-header">
+                <div class="modal-icon"><i class="fa-solid fa-ticket"></i></div>
                 <h3>Summit Ticket Registration</h3>
-                <p>Fill out your credentials below to reserve your slot.</p>
+                <p>Complete your credentials to reserve your NexusTech pass.</p>
             </div>
-            
+
             <form id="registrationForm" class="registration-form" novalidate>
                 <div class="form-group">
                     <label for="fullName">Full Name <span class="required">*</span></label>
@@ -339,7 +792,7 @@
                         <i class="fa-solid fa-user"></i>
                         <input type="text" id="fullName" placeholder="Jane Doe" required>
                     </div>
-                    <span class="error-msg" id="nameError">Name is required.</span>
+                    <span class="error-msg" id="nameError">Full name is required.</span>
                 </div>
 
                 <div class="form-group">
@@ -348,7 +801,7 @@
                         <i class="fa-solid fa-envelope"></i>
                         <input type="email" id="email" placeholder="jane@company.com" required>
                     </div>
-                    <span class="error-msg" id="emailError">Please enter a valid email.</span>
+                    <span class="error-msg" id="emailError">Please enter a valid work email address.</span>
                 </div>
 
                 <div class="form-group">
@@ -357,37 +810,50 @@
                         <i class="fa-solid fa-phone"></i>
                         <input type="tel" id="phone" placeholder="+1 (555) 000-0000" required>
                     </div>
-                    <span class="error-msg" id="phoneError">Valid phone number required.</span>
+                    <span class="error-msg" id="phoneError">Please enter a valid phone number.</span>
                 </div>
 
                 <div class="form-group">
                     <label for="selectedTrack">Event Track / Ticket Type <span class="required">*</span></label>
                     <div class="input-wrapper">
-                        <i class="fa-solid fa-ticket"></i>
+                        <i class="fa-solid fa-layer-group"></i>
                         <select id="selectedTrack" required>
                             <option value="All Access Pass">All Access Pass (All 3 Days)</option>
                             <option value="Generative AI & LLM Systems">Generative AI & LLM Systems</option>
                             <option value="Modern Full-Stack Distributed Web">Modern Full-Stack Distributed Web</option>
                             <option value="Global Developer 24hr Hackathon">Global Developer 24hr Hackathon</option>
-                            <option value="Cloud Native & Kubernetes Resilience">Cloud Native & Kubernetes Resilience</option>
+                            <option value="Cloud Native & Kubernetes Resilience">Cloud Native & Kubernetes Resilience
+                            </option>
                         </select>
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-full">
-                    Confirm Registration <i class="fa-solid fa-check"></i>
+                <button type="submit" class="btn btn-primary btn-full btn-large">
+                    <span>Confirm Pass Registration</span>
+                    <i class="fa-solid fa-check"></i>
                 </button>
             </form>
 
             <div id="formSuccessMessage" class="success-box hidden">
-                <i class="fa-solid fa-circle-check success-icon"></i>
+                <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
                 <h4>Registration Confirmed!</h4>
-                <p>Your access pass has been reserved. Check your email inbox for confirmation details.</p>
+                <p>Your access pass has been successfully reserved. A digital ticket and QR code have been dispatched to
+                    your email.</p>
+                <button class="btn btn-outline btn-full" onclick="closeModal()">Close Window</button>
             </div>
         </div>
     </div>
 
+    <!-- Floating Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to Top" title="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Container for Dynamic Notifications -->
+    <div id="toastContainer" class="toast-container"></div>
+
     <!-- External Script -->
     <script src="script.js"></script>
 </body>
+
 </html>
