@@ -1,8 +1,6 @@
-# ⚡ NexusTech 2026 - Global Tech & Developer Summit
-
 <div align="center">
 
-  <h1>🚀 Your Project Name</h1>
+  # <h1>🚀  ⚡ NexusTech 2026 - Global Tech & Developer Summit</h1>
 
   <p>A brief, compelling one-line description of what your project does.</p>
 
@@ -17,7 +15,7 @@
   </a>
 
 </div>
----
+
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
