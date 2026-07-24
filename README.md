@@ -1,32 +1,37 @@
 <div align="center">
 
-  # <h1>🚀  ⚡ NexusTech 2026 - Global Tech & Developer Summit</h1>
+  <h1>🚀 ⚡ NexusTech 2026 - Global Tech & Developer Summit</h1>
 
-  <p>A brief, compelling one-line description of what your project does.</p>
+  <p>A modern, high-converting, and feature-rich event landing page built from scratch using pure HTML5, CSS3, and Vanilla JavaScript.</p>
 
   <!-- Live Demo Badge Link -->
-  <a href=" https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/Live_Demo-Visit_Website-0070F3?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo" />
+  <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Live_Demo-Visit_Website-0070F3?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Demo" />
   </a>
   
-  <!-- Optional Deployment Status Badge -->
-  <a href="https://yourwebsite.com" target="_blank" rel="noopener noreferrer">
+  <!-- Deployment Status Badge -->
+  <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Status-Active-10B981?style=for-the-badge" alt="Status" />
   </a>
 
+  <br /><br />
+
+  <!-- Tech Stack Badges -->
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Design-Responsive-10B981?style=for-the-badge" alt="Responsive" />
+  <img src="https://img.shields.io/badge/Theme-Dark%20%2F%20Light-6366F1?style=for-the-badge" alt="Theme Support" />
+
 </div>
-
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Responsive](https://img.shields.io/badge/Design-Responsive-10B981?style=for-the-badge)
-![Theme](https://img.shields.io/badge/Dark%20%2F%20Light-Supported-6366F1?style=for-the-badge)
-
-A modern, high-converting, and feature-rich event landing page designed and built independently from scratch. This web application showcases advanced frontend design systems, glassmorphism aesthetics, responsive layouts, and interactive Vanilla JavaScript features without relying on external frameworks.
 
 ---
 
+## 📖 About The Project
+
+A modern, high-converting, and feature-rich event landing page designed and built independently from scratch. This web application showcases advanced frontend design systems, glassmorphism aesthetics, responsive layouts, and interactive Vanilla JavaScript features without relying on external frameworks.
+
+🌐 **Live Website:** [rahulxdev1201.github.io/event-landing-page](https://rahulxdev1201.github.io/event-landing-page/)
 ## 📌 Features & Capabilities
 
 - 🌙 **Dark & Light Mode Theme Switcher**: Persisted automatically in `localStorage`.
