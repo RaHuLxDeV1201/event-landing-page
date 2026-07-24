@@ -1,6 +1,22 @@
 # ⚡ NexusTech 2026 - Global Tech & Developer Summit
 
-[![Website](https://img.shields.io/badge/Website_Live_Site-0070f3?style=for-the-badge&logo=googlechrome&logoColor=white)](https://rahulxdev1201.github.io/event-landing-page/#faq)
+<div align="center">
+
+  <h1>🚀 Your Project Name</h1>
+
+  <p>A brief, compelling one-line description of what your project does.</p>
+
+  <!-- Live Demo Badge Link -->
+  <a href="https://yourwebsite.com" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Live_Demo-Visit_Website-0070F3?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo" />
+  </a>
+  
+  <!-- Optional Deployment Status Badge -->
+  <a href="https://yourwebsite.com" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Status-Active-10B981?style=for-the-badge" alt="Status" />
+  </a>
+
+</div>
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
