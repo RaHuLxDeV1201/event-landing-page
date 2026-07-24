@@ -1,22 +1,44 @@
 /* ==========================================================================
-   TechPulse 2026 - Interactive Script
+   NexusTech 2026 - Main Engine Script
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-    initNavigation();
-    initCountdownTimer();
+    initTheme();
+    initMobileNav();
+    initCountdown();
+    initEventFilters();
+    initFormValidation();
 });
 
-/* --- Mobile Navigation Toggle --- */
-function initNavigation() {
+/* --- Theme Switcher (Dark / Light Mode) --- */
+function initTheme() {
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('nexustech_theme');
+
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        if (themeToggleBtn) themeToggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    }
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            const isDark = document.body.classList.contains('dark-theme');
+
+            localStorage.setItem('nexustech_theme', isDark ? 'dark' : 'light');
+            themeToggleBtn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+        });
+    }
+}
+
+/* --- Mobile Hamburger Navigation Toggle --- */
+function initMobileNav() {
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const navLinks = document.getElementById('navLinks');
 
     if (hamburgerBtn && navLinks) {
         hamburgerBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-
-            // Toggle menu icon
             const icon = hamburgerBtn.querySelector('i');
             if (icon) {
                 icon.classList.toggle('fa-bars');
@@ -24,8 +46,8 @@ function initNavigation() {
             }
         });
 
-        // Close navbar menu when clicking a link
-        navLinks.querySelectorAll('a').forEach(link => {
+        // Auto close nav on link click
+        navLinks.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 const icon = hamburgerBtn.querySelector('i');
@@ -38,22 +60,22 @@ function initNavigation() {
     }
 }
 
-/* --- Countdown Timer Feature --- */
-function initCountdownTimer() {
-    // Set event launch date to 30 days from now
-    const eventDate = new Date();
-    eventDate.setDate(eventDate.getDate() + 30);
+/* --- Live Countdown Timer --- */
+function initCountdown() {
+    // Target date set to 45 days into the future
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 45);
 
     function updateTimer() {
         const now = new Date().getTime();
-        const distance = eventDate.getTime() - now;
+        const difference = targetDate.getTime() - now;
 
-        if (distance < 0) return;
+        if (difference <= 0) return;
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
         document.getElementById('days').textContent = days < 10 ? '0' + days : days;
         document.getElementById('hours').textContent = hours < 10 ? '0' + hours : hours;
@@ -65,58 +87,159 @@ function initCountdownTimer() {
     setInterval(updateTimer, 1000);
 }
 
-/* --- Modal Controllers --- */
-function openModal(eventName = 'All Access Pass') {
-    const modal = document.getElementById('registrationModal');
-    const selectElem = document.getElementById('eventSelect');
+/* --- Event Category Filtering & Live Search --- */
+function initEventFilters() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const searchInput = document.getElementById('eventSearch');
+    const eventCards = document.querySelectorAll('.event-card');
+    const noEventsMsg = document.getElementById('noEventsMsg');
 
-    if (selectElem && eventName) {
-        selectElem.value = eventName;
+    let activeCategory = 'all';
+    let searchQuery = '';
+
+    function filterEvents() {
+        let visibleCount = 0;
+
+        eventCards.forEach(card => {
+            const cardCategory = card.dataset.category;
+            const cardTitle = card.querySelector('h3').textContent.toLowerCase();
+            const cardDesc = card.querySelector('p').textContent.toLowerCase();
+
+            const matchesCategory = activeCategory === 'all' || cardCategory === activeCategory;
+            const matchesSearch = cardTitle.includes(searchQuery) || cardDesc.includes(searchQuery);
+
+            if (matchesCategory && matchesSearch) {
+                card.style.display = 'flex';
+                visibleCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        if (noEventsMsg) {
+            if (visibleCount === 0) {
+                noEventsMsg.classList.remove('hidden');
+            } else {
+                noEventsMsg.classList.add('hidden');
+            }
+        }
+    }
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeCategory = btn.dataset.category;
+            filterEvents();
+        });
+    });
+
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value.toLowerCase().trim();
+            filterEvents();
+        });
+    }
+}
+
+/* --- Registration Modal & Form Validation --- */
+function openModal(trackName = 'All Access Pass') {
+    const modal = document.getElementById('registrationModal');
+    const trackSelect = document.getElementById('selectedTrack');
+
+    if (trackSelect && trackName) {
+        trackSelect.value = trackName;
     }
 
     if (modal) {
         modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
     }
 }
 
 function closeModal() {
     const modal = document.getElementById('registrationModal');
-    const successMsg = document.getElementById('formSuccessMessage');
     const form = document.getElementById('registrationForm');
+    const successBox = document.getElementById('formSuccessMessage');
 
     if (modal) {
         modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
     }
 
-    // Reset form after close animation
     setTimeout(() => {
-        if (form) form.reset();
-        if (successMsg) successMsg.classList.add('hidden');
+        if (form) {
+            form.reset();
+            form.classList.remove('hidden');
+        }
+        if (successBox) successBox.classList.add('hidden');
+        clearErrors();
     }, 300);
 }
 
-/* --- Registration Form Handler --- */
-function handleFormSubmit(event) {
+document.getElementById('closeModalBtn')?.addEventListener('click', closeModal);
+
+function clearErrors() {
+    document.querySelectorAll('.form-group').forEach(group => {
+        group.classList.remove('invalid');
+    });
+}
+
+function initFormValidation() {
+    const form = document.getElementById('registrationForm');
+    const successBox = document.getElementById('formSuccessMessage');
+
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        clearErrors();
+
+        const nameInput = document.getElementById('fullName');
+        const emailInput = document.getElementById('email');
+        const phoneInput = document.getElementById('phone');
+
+        let isValid = true;
+
+        // Name Validation
+        if (!nameInput.value.trim()) {
+            showError(nameInput, 'nameError');
+            isValid = false;
+        }
+
+        // Email Validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value.trim())) {
+            showError(emailInput, 'emailError');
+            isValid = false;
+        }
+
+        // Phone Validation
+        if (phoneInput.value.trim().length < 7) {
+            showError(phoneInput, 'phoneError');
+            isValid = false;
+        }
+
+        if (isValid) {
+            form.classList.add('hidden');
+            if (successBox) successBox.classList.remove('hidden');
+
+            setTimeout(() => {
+                closeModal();
+            }, 3000);
+        }
+    });
+}
+
+function showError(inputElem, errorId) {
+    const formGroup = inputElem.closest('.form-group');
+    if (formGroup) {
+        formGroup.classList.add('invalid');
+    }
+}
+
+function handleNewsletter(event) {
     event.preventDefault();
-
-    const fullName = document.getElementById('fullName').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const selectedEvent = document.getElementById('eventSelect').value;
-
-    // Simple validation check
-    if (!fullName || !email || !phone) {
-        alert('Please fill out all required fields.');
-        return;
-    }
-
-    const successMsg = document.getElementById('formSuccessMessage');
-    if (successMsg) {
-        successMsg.classList.remove('hidden');
-    }
-
-    // Auto-close modal after 2.5 seconds
-    setTimeout(() => {
-        closeModal();
-    }, 2500);
+    alert('Thank you for subscribing to NexusTech updates!');
+    event.target.reset();
 }

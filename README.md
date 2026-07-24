@@ -1,39 +1,38 @@
-# TechPulse 2026 - Event Management Landing Page
+# NexusTech Summit 2026 - Event Management Landing Page
 
-A clean, responsive, and interactive landing page built for the Machine Learning Centre of Excellence (MLCOE) Web Development recruitment task.
+A responsive and interactive event management landing page designed for the **Machine Learning Centre of Excellence (MLCOE) Recruitment Task**.
 
-## 🚀 Overview
+## 🚀 Live Demo & Submission Details
 
-TechPulse 2026 is a modern landing page for a developer technology summit. It presents upcoming conference tracks, keynotes, registration options, and interactive elements.
+- **Author:** Candidate Submission
+- **Domain Focus:** Event Management / Tech Summit
+- **Technologies:** Semantic HTML5, CSS3 (Flexbox & Grid), Vanilla JavaScript ES6+
 
-## 🛠️ Technologies Used
+---
 
-- **HTML5:** Semantic layout structuring.
-- **CSS3:** Custom styles, CSS variables, Flexbox, Grid, keyframe animations, and media queries.
-- **JavaScript (Vanilla):** Dynamic DOM manipulations, modal toggling, event countdown timer, and form validation.
-- **FontAwesome:** Scalable vector icons.
+## 📋 Evaluation Criteria & Completed Specifications
 
-## ✨ Key Features Implemented
+| Requirement | Implementation Status | Features Added |
+| :--- | :---: | :--- |
+| **HTML & CSS Fundamentals** | ✅ Complete | Semantic HTML elements, external style sheet separation (`style.css`), no inline CSS. |
+| **UI & Creativity** | ✅ Complete | Glassmorphic navbar, gradient accents, modern typography stack, responsive card layouts. |
+| **Responsiveness** | ✅ Complete | Mobile navigation, grid scaling, media query break-points at `992px` and `768px`. |
+| **Animations & Hover Effects** | ✅ Complete | Dynamic transition effects on event cards, floating hero elements, modal slide transitions. |
+| **JavaScript Functionality** | ✅ Complete | Dark/Light mode theme toggle, Category Filtering, Live Event Search, Countdown Timer, Modal Dialog with Validation. |
 
-1. **Responsive Navbar:** Includes a functional mobile hamburger navigation menu.
-2. **Hero Section:** Features a high-impact call-to-action (CTA) and live JavaScript countdown timer.
-3. **About Section:** Information grid displaying platform highlights and event statistics.
-4. **Events Grid:** Responsive CSS Grid card design displaying 3 primary events with hover animations.
-5. **Interactive Registration Modal:** Dynamic modal form collecting contact details and track selection.
-6. **Form Validation:** Basic client-side JavaScript validation with dynamic success confirmations.
+---
 
-## 📁 File Structure
+## ✨ Key JS Interactions Included
 
-```text
-event-landing-page/
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-```
-🌐 External Resources
-Fonts: System UI Fallback Stack
+1. **Dark & Light Mode Switcher:** User preference persisted in `localStorage`.
+2. **Event Filter Tabs & Keyword Search:** Instantly filter cards by category (AI, Web, Hackathons) or live input query.
+3. **Registration Modal Dialog:** Dynamic pre-selection of track title upon clicking event buttons.
+4. **Interactive Form Validation:** Regular expression error checking for email and input lengths.
+5. **Countdown Clock:** Live dynamic timer counting down to the summit commencement.
 
-Icons: FontAwesome 6.4 CDN
+---
 
-Images: Unsplash Free License
+## 🛠️ Third-Party Assets Used
+
+- **Icons:** [FontAwesome 6.4 CDN](https://cdnjs.com)
+- **Stock Media:** Free license photography provided by [Unsplash](https://unsplash.com)
