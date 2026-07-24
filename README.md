@@ -47,12 +47,6 @@ A modern, high-converting, and feature-rich event landing page designed and buil
 - 📝 **Real-Time Form Validation**: Regex validation for Full Name, Work Email, and Phone Number with error handling.
 - 🔔 **Toast Notification System**: Animated system notifications.
 
-  <div align="center">
-  <!-- Live Demo Button -->
-  <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/Live_Demo-Visit_Website-0070F3?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Demo" />
-  </a>
-
   <br /><br />
 
   <!-- Lighthouse Audit Scores -->
