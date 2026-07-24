@@ -1,10 +1,7 @@
 <div align="center">
-
-  <h1>🚀 ⚡ NexusTech 2026 - Global Tech & Developer Summit</h1>
-
-  <p>A modern, high-converting, and feature-rich event landing page built from scratch using pure HTML5, CSS3, and Vanilla JavaScript.</p>
-
-  <!-- Live Demo Badge Link -->
+<h1>🚀 ⚡ NexusTech 2026 - Global Tech & Developer Summit</h1>
+<p>A modern, high-converting, and feature-rich event landing page built from scratch using pure HTML5, CSS3, and Vanilla JavaScript.</p>
+<!-- Live Demo Badge Link -->
   <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Live_Demo-Visit_Website-0070F3?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Demo" />
   </a>
@@ -13,16 +10,13 @@
   <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Status-Active-10B981?style=for-the-badge" alt="Status" />
   </a>
-
   <br /><br />
-
   <!-- Tech Stack Badges -->
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
   <img src="https://img.shields.io/badge/Design-Responsive-10B981?style=for-the-badge" alt="Responsive" />
   <img src="https://img.shields.io/badge/Theme-Dark%20%2F%20Light-6366F1?style=for-the-badge" alt="Theme Support" />
-
 </div>
 
 ---
@@ -46,7 +40,6 @@ A modern, high-converting, and feature-rich event landing page designed and buil
 - ❓ **FAQ Accordion**: Smooth expanding questions and answers.
 - 📝 **Real-Time Form Validation**: Regex validation for Full Name, Work Email, and Phone Number with error handling.
 - 🔔 **Toast Notification System**: Animated system notifications.
-
   <br /><br />
 
   <!-- Lighthouse Audit Scores -->
