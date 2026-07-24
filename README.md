@@ -1,4 +1,4 @@
-# NexusTech Summit 2026 - Event Management Landing Page
+# NexusTech Summit 2026 - Ultra-Professional Event Landing Page
 
 An ultra-professional, interactive, and responsive event landing page engineered for the **Machine Learning Centre of Excellence (MLCOE) Web Development Recruitment Task**.
 
@@ -18,26 +18,29 @@ An ultra-professional, interactive, and responsive event landing page engineered
 | Evaluation Area | Weight | Implementation Details |
 | :--- | :---: | :--- |
 | **HTML & CSS Fundamentals** | **20%** | Built with clean semantic HTML5 (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`). CSS styles are completely decoupled in `style.css` without inline styles. |
-| **UI & Creativity** | **20%** | Modern typography (`Outfit` & `Plus Jakarta Sans`), sleek dark/light mode color design system, glassmorphism backdrop filters, ambient background glows, and interactive stats badges. |
+| **UI & Creativity** | **20%** | Modern typography (`Outfit` & `Plus Jakarta Sans`), sleek dark/light mode color design system, glassmorphism backdrop filters, ambient background glows, infinite brand marquee ticker, and interactive stats badges. |
 | **Responsiveness** | **20%** | Mobile-first architecture using Flexbox and CSS Grid. Fully tested across Desktop (`1200px+`), Tablet (`768px`), and Mobile (`375px`) viewports. Smooth sliding mobile drawer menu. |
-| **Animations & Interactivity** | **15%** | Card magnetic elevation on hover, button shimmer transitions, timeline line indicators, smooth modal popups, and pulse badges. |
+| **Animations & Interactivity** | **15%** | Card magnetic elevation on hover, button shimmer transitions, timeline line indicators, smooth modal popups, confetti explosions, and infinite logo marquee animation. |
 | **Code Quality** | **10%** | Modular, well-commented ES6+ JavaScript code. Zero framework dependencies. Full ARIA accessibility attributes (`aria-expanded`, `aria-hidden`, `aria-label`). |
-| **JavaScript Functionality** | **10%** | Features include Dark/Light theme toggle with `localStorage` persistence, live countdown timer, interactive 3-day schedule agenda switcher, live event keyword search & category filter, FAQ accordion, dynamic registration modal with regex validation, and custom toast notifications. |
+| **JavaScript Functionality** | **10%** | Features include Dark/Light theme toggle with `localStorage` persistence, live countdown timer, interactive 3-day schedule agenda switcher, live event keyword search & category filter, FAQ accordion, speaker detail profile modals, ticket quantity & promo code calculator (`MLCOE50`), Google Calendar invite generator, dynamic registration modal with regex validation, confetti particle explosions, and custom toast notifications. |
 | **GitHub & README** | **5%** | Complete documentation, feature breakdown, setup guide, and third-party asset citations. |
 
 ---
 
-## ✨ Key Features & Interactions
+## ✨ Features & Interactive Capabilities Added
 
-1. **Dark & Light Mode Switcher:** Persisted automatically in `localStorage` with smooth icon transition and toast notification feedback.
-2. **Sticky Scroll-Spy Navbar:** Glassmorphic header that shrinks on scroll and dynamically highlights the active navigation section.
-3. **Live Countdown Clock:** Dynamic real-time timer counting down to the summit commencement with double-digit formatting.
-4. **Interactive 3-Day Summit Agenda:** Tabbed schedule navigation allowing attendees to explore keynotes, workshops, and hackathons per day.
-5. **Event Filtering & Keyword Search Engine:** Search by title, description, or speaker in real time alongside category tabs (AI, Web, Hackathons).
-6. **FAQ Accordion:** Expandable accordion allowing attendees to find quick answers regarding passes and logistics.
-7. **Registration Modal Dialog with Form Validation:** Pre-fills selected event track, validates inputs (Name, Email, Phone regex) in real-time, displays confirmation states, and triggers toast notifications.
-8. **Toast Notification System:** Non-intrusive animated toast notifications for user actions (theme changes, form submissions, filter updates).
-9. **Back to Top Smooth Scroll:** Floating glass button that appears after scrolling down.
+1. **🎟️ Interactive Pass Calculator & Promo Code Engine:** Select ticket tier, adjust quantity (`+` / `-`), enter promo code `MLCOE50` for 50% discount with dynamic subtotal updates.
+2. **🎉 Pure JS Confetti Particle Cannon:** Triggers vibrant confetti particle physics upon successful pass registration or newsletter subscription.
+3. **👨‍💻 Speaker Profile Modals:** Click any keynote speaker card or tag to view their full biography, research achievements, and talk details.
+4. **📅 Google Calendar Invite Generator:** One-click "Add to Google Calendar" button for agenda timeline sessions.
+5. **🏆 $50,000 Hackathon & Prize Breakdown Section:** Gold, Silver, and Bronze prize breakdown cards + team registration progress bar (79% filled).
+6. **♾️ Infinite Scrolling Logo Marquee Ticker:** Continuous animated tech sponsor ticker featuring Google Cloud, AWS, Azure, Meta, NVIDIA, and GitHub.
+7. **🌙 Dark & Light Mode Switcher:** Persisted automatically in `localStorage`.
+8. **📌 Sticky Scroll-Spy Navbar:** Glassmorphic header that shrinks on scroll and dynamically highlights active section navigation links.
+9. **⏱️ Live Countdown Clock:** Dynamic real-time timer counting down to summit launch.
+10. **🔍 Live Category Filter & Search Engine:** Instant keyword search across title, description, and speakers.
+11. **❓ FAQ Accordion:** Expanding answers for attendee queries.
+12. **🔔 Custom Toast Notifications System:** Non-intrusive animated toast alerts.
 
 ---
 

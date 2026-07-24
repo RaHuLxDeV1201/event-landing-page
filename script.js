@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initAgendaTabs();
     initEventFilters();
     initFaqAccordion();
+    initPriceCalculator();
+    initSpeakerModal();
     initFormValidation();
     initNewsletterForm();
     initBackToTop();
@@ -42,7 +44,7 @@ function initTheme() {
 }
 
 /* --------------------------------------------------------------------------
-   2. Sticky Header Shrink & Scroll-Spy Navigation
+   2. Sticky Header & Scroll Spy
    -------------------------------------------------------------------------- */
 function initHeaderScroll() {
     const header = id('mainHeader');
@@ -52,7 +54,6 @@ function initHeaderScroll() {
     window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
 
-        // Header shadow shrink on scroll
         if (header) {
             if (scrollY > 50) {
                 header.classList.add('scrolled');
@@ -61,7 +62,6 @@ function initHeaderScroll() {
             }
         }
 
-        // Scroll spy section highlighting
         sections.forEach(section => {
             const sectionHeight = section.offsetHeight;
             const sectionTop = section.offsetTop - 120;
@@ -80,7 +80,7 @@ function initHeaderScroll() {
 }
 
 /* --------------------------------------------------------------------------
-   3. Mobile Hamburger Drawer Navigation
+   3. Mobile Navigation Drawer
    -------------------------------------------------------------------------- */
 function initMobileNav() {
     const hamburgerBtn = id('hamburgerBtn');
@@ -96,7 +96,6 @@ function initMobileNav() {
             }
         });
 
-        // Auto close nav when a link is clicked
         navLinks.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
@@ -111,10 +110,9 @@ function initMobileNav() {
 }
 
 /* --------------------------------------------------------------------------
-   4. Dynamic Live Countdown Clock
+   4. Live Countdown Clock
    -------------------------------------------------------------------------- */
 function initCountdown() {
-    // Set target date 45 days in the future
     const targetDate = new Date();
     targetDate.setDate(targetDate.getDate() + 45);
 
@@ -144,7 +142,7 @@ function initCountdown() {
 }
 
 /* --------------------------------------------------------------------------
-   5. Interactive Day Agenda Switcher
+   5. Interactive Agenda Tabs
    -------------------------------------------------------------------------- */
 function initAgendaTabs() {
     const tabs = document.querySelectorAll('.agenda-tab');
@@ -167,7 +165,7 @@ function initAgendaTabs() {
 }
 
 /* --------------------------------------------------------------------------
-   6. Event Filter Tabs & Live Search Engine
+   6. Event Filter Tabs & Live Search
    -------------------------------------------------------------------------- */
 function initEventFilters() {
     const filterBtns = document.querySelectorAll('.filter-btn');
@@ -187,10 +185,9 @@ function initEventFilters() {
             const cardCategory = card.dataset.category;
             const cardTitle = card.querySelector('h3').textContent.toLowerCase();
             const cardDesc = card.querySelector('p').textContent.toLowerCase();
-            const cardSpeaker = card.querySelector('.speaker-tag') ? card.querySelector('.speaker-tag').textContent.toLowerCase() : '';
 
             const matchesCategory = activeCategory === 'all' || cardCategory === activeCategory;
-            const matchesSearch = cardTitle.includes(searchQuery) || cardDesc.includes(searchQuery) || cardSpeaker.includes(searchQuery);
+            const matchesSearch = cardTitle.includes(searchQuery) || cardDesc.includes(searchQuery);
 
             if (matchesCategory && matchesSearch) {
                 card.style.display = 'flex';
@@ -221,7 +218,6 @@ function initEventFilters() {
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
             searchQuery = e.target.value.toLowerCase().trim();
-
             if (clearSearchBtn) {
                 if (searchQuery.length > 0) {
                     clearSearchBtn.classList.remove('hidden');
@@ -261,7 +257,7 @@ function initEventFilters() {
 }
 
 /* --------------------------------------------------------------------------
-   7. FAQ Accordion Logic
+   7. FAQ Accordion
    -------------------------------------------------------------------------- */
 function initFaqAccordion() {
     const faqQuestions = document.querySelectorAll('.faq-question');
@@ -271,7 +267,6 @@ function initFaqAccordion() {
             const item = question.parentElement;
             const isActive = item.classList.contains('active');
 
-            // Close all other active items
             document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
 
             if (!isActive) {
@@ -285,7 +280,165 @@ function initFaqAccordion() {
 }
 
 /* --------------------------------------------------------------------------
-   8. Registration Modal & Form Validation
+   8. Ticket Price Calculator & Promo Code Engine
+   -------------------------------------------------------------------------- */
+let ticketQuantity = 1;
+let isDiscountApplied = false;
+
+function initPriceCalculator() {
+    const trackSelect = id('selectedTrack');
+    const qtyMinusBtn = id('qtyMinusBtn');
+    const qtyPlusBtn = id('qtyPlusBtn');
+    const qtySpan = id('ticketQty');
+    const applyPromoBtn = id('applyPromoBtn');
+    const promoInput = id('promoCode');
+
+    function updatePrice() {
+        if (!trackSelect) return;
+        const selectedOption = trackSelect.options[trackSelect.selectedIndex];
+        const baseUnitPrice = parseFloat(selectedOption.dataset.price || 299);
+
+        let subtotal = baseUnitPrice * ticketQuantity;
+        let discount = isDiscountApplied ? subtotal * 0.5 : 0;
+        let total = subtotal - discount;
+
+        if (id('basePriceText')) id('basePriceText').textContent = `$${subtotal.toFixed(2)}`;
+        if (id('discountText')) id('discountText').textContent = `-$${discount.toFixed(2)}`;
+        if (id('totalPriceText')) id('totalPriceText').textContent = `$${total.toFixed(2)}`;
+
+        const discountRow = id('discountRow');
+        if (discountRow) {
+            if (isDiscountApplied) {
+                discountRow.classList.remove('hidden');
+            } else {
+                discountRow.classList.add('hidden');
+            }
+        }
+    }
+
+    if (trackSelect) trackSelect.addEventListener('change', updatePrice);
+
+    if (qtyMinusBtn) {
+        qtyMinusBtn.addEventListener('click', () => {
+            if (ticketQuantity > 1) {
+                ticketQuantity--;
+                if (qtySpan) qtySpan.textContent = ticketQuantity;
+                updatePrice();
+            }
+        });
+    }
+
+    if (qtyPlusBtn) {
+        qtyPlusBtn.addEventListener('click', () => {
+            if (ticketQuantity < 10) {
+                ticketQuantity++;
+                if (qtySpan) qtySpan.textContent = ticketQuantity;
+                updatePrice();
+            }
+        });
+    }
+
+    if (applyPromoBtn) {
+        applyPromoBtn.addEventListener('click', () => {
+            const code = promoInput ? promoInput.value.trim().toUpperCase() : '';
+            if (code === 'MLCOE50' || code === 'NEXUS2026') {
+                isDiscountApplied = true;
+                updatePrice();
+                showToast('Promo Code Applied: 50% OFF!', 'success');
+            } else {
+                showToast('Invalid promo code. Try MLCOE50', 'danger');
+            }
+        });
+    }
+
+    updatePrice();
+}
+
+/* --------------------------------------------------------------------------
+   9. Speaker Profile Modal
+   -------------------------------------------------------------------------- */
+const speakerData = {
+    aris: {
+        name: 'Dr. Aris Thorne',
+        role: 'Lead AI Researcher',
+        company: 'Synapse AI',
+        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80',
+        bio: 'Dr. Aris Thorne has authored 20+ top-cited papers on autonomous transformer agent architectures and synthetic training dataset alignment.',
+        talk: 'Generative AI & LLM Systems',
+        time: 'Oct 15, 2026 &bull; 10:00 AM EST &bull; Main Stage (Hall A)'
+    },
+    sarah: {
+        name: 'Sarah Jenkins',
+        role: 'VP of Engineering',
+        company: 'CloudScale',
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80',
+        bio: 'Sarah Jenkins leads a global team of 200+ engineers building ultra-low-latency distributed edge ruff systems for real-time web streaming.',
+        talk: 'Modern Full-Stack Distributed Web',
+        time: 'Oct 16, 2026 &bull; 02:00 PM EST &bull; Main Stage (Hall A)'
+    },
+    marcus: {
+        name: 'Marcus Vance',
+        role: 'Principal Systems Architect',
+        company: 'DevCore',
+        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80',
+        bio: 'Marcus Vance is a prolific open-source maintainer and creator of container security mesh tools deployed across Fortune 500 clouds.',
+        talk: 'Cloud Native & Kubernetes Resilience',
+        time: 'Oct 16, 2026 &bull; 11:30 AM EST &bull; Cloud Room 201'
+    }
+};
+
+function initSpeakerModal() {
+    const closeBtn = id('closeSpeakerModalBtn');
+    if (closeBtn) closeBtn.addEventListener('click', closeSpeakerModal);
+}
+
+function openSpeakerModal(speakerKey) {
+    const data = speakerData[speakerKey];
+    if (!data) return;
+
+    if (id('modalSpeakerAvatar')) id('modalSpeakerAvatar').src = data.avatar;
+    if (id('modalSpeakerName')) id('modalSpeakerName').textContent = data.name;
+    if (id('modalSpeakerRole')) id('modalSpeakerRole').textContent = data.role;
+    if (id('modalSpeakerCompany')) id('modalSpeakerCompany').textContent = data.company;
+    if (id('modalSpeakerBio')) id('modalSpeakerBio').textContent = data.bio;
+    if (id('modalSpeakerTalkTitle')) id('modalSpeakerTalkTitle').textContent = data.talk;
+    if (id('modalSpeakerTalkTime')) id('modalSpeakerTalkTime').innerHTML = data.time;
+
+    const modal = id('speakerModal');
+    if (modal) {
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeSpeakerModal() {
+    const modal = id('speakerModal');
+    if (modal) {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+}
+
+/* --------------------------------------------------------------------------
+   10. Add to Google Calendar Generator
+   -------------------------------------------------------------------------- */
+function addEventToCalendar(title, timeStr, locationStr) {
+    const baseUrl = 'https://calendar.google.com/calendar/render';
+    const params = new URLSearchParams({
+        action: 'TEMPLATE',
+        text: `NexusTech 2026: ${title}`,
+        details: `Attending NexusTech Summit 2026 session: ${title}`,
+        location: locationStr,
+    });
+
+    window.open(`${baseUrl}?${params.toString()}`, '_blank');
+    showToast('Opening Google Calendar invite...', 'info');
+}
+
+/* --------------------------------------------------------------------------
+   11. Registration Form Validation & Confetti Blast
    -------------------------------------------------------------------------- */
 function openModal(trackName = 'All Access Pass') {
     const modal = id('registrationModal');
@@ -293,6 +446,9 @@ function openModal(trackName = 'All Access Pass') {
 
     if (trackSelect && trackName) {
         trackSelect.value = trackName;
+        // Trigger price update event
+        const event = new Event('change');
+        trackSelect.dispatchEvent(event);
     }
 
     if (modal) {
@@ -347,37 +503,35 @@ function initFormValidation() {
 
         let isValid = true;
 
-        // Name Validation
         if (!nameInput || nameInput.value.trim().length < 2) {
-            showError('fullName', 'nameError');
+            showError('fullName');
             isValid = false;
         }
 
-        // Email Validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailInput || !emailRegex.test(emailInput.value.trim())) {
-            showError('email', 'emailError');
+            showError('email');
             isValid = false;
         }
 
-        // Phone Validation
         const phoneRegex = /^[\+\d\s\(\)\-]{7,20}$/;
         if (!phoneInput || !phoneRegex.test(phoneInput.value.trim())) {
-            showError('phone', 'phoneError');
+            showError('phone');
             isValid = false;
         }
 
         if (isValid) {
             form.classList.add('hidden');
             if (successBox) successBox.classList.remove('hidden');
-            showToast('Registration submitted successfully!', 'success');
+            showToast('Registration confirmed! 🎉', 'success');
+            triggerConfetti();
         } else {
             showToast('Please fix the highlighted form errors.', 'danger');
         }
     });
 }
 
-function showError(inputId, errorId) {
+function showError(inputId) {
     const input = id(inputId);
     if (input) {
         const group = input.closest('.form-group');
@@ -386,7 +540,65 @@ function showError(inputId, errorId) {
 }
 
 /* --------------------------------------------------------------------------
-   9. Newsletter Form Handler
+   12. Pure JS Confetti Particle Engine
+   -------------------------------------------------------------------------- */
+function triggerConfetti() {
+    const canvas = id('confettiCanvas');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const particles = [];
+    const colors = ['#6366f1', '#10b981', '#f59e0b', '#ef4444', '#ec4899', '#8b5cf6'];
+
+    for (let i = 0; i < 120; i++) {
+        particles.push({
+            x: canvas.width / 2,
+            y: canvas.height / 2,
+            vx: (Math.random() - 0.5) * 14,
+            vy: (Math.random() - 0.8) * 14,
+            size: Math.random() * 8 + 4,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            rotation: Math.random() * 360,
+            rSpeed: (Math.random() - 0.5) * 10
+        });
+    }
+
+    let animationFrame;
+    const startTime = Date.now();
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach(p => {
+            p.x += p.vx;
+            p.y += p.vy;
+            p.vy += 0.25; // Gravity
+            p.rotation += p.rSpeed;
+
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate((p.rotation * Math.PI) / 180);
+            ctx.fillStyle = p.color;
+            ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+            ctx.restore();
+        });
+
+        if (Date.now() - startTime < 3000) {
+            animationFrame = requestAnimationFrame(animate);
+        } else {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            cancelAnimationFrame(animationFrame);
+        }
+    }
+
+    animate();
+}
+
+/* --------------------------------------------------------------------------
+   13. Newsletter & Back to Top & Toast
    -------------------------------------------------------------------------- */
 function initNewsletterForm() {
     const form = id('newsletterForm');
@@ -399,6 +611,7 @@ function initNewsletterForm() {
 
             if (emailInput && emailRegex.test(emailInput.value.trim())) {
                 showToast('Subscribed to NexusTech updates!', 'success');
+                triggerConfetti();
                 form.reset();
             } else {
                 showToast('Please enter a valid email address.', 'danger');
@@ -407,9 +620,6 @@ function initNewsletterForm() {
     }
 }
 
-/* --------------------------------------------------------------------------
-   10. Back to Top Button
-   -------------------------------------------------------------------------- */
 function initBackToTop() {
     const backToTopBtn = id('backToTop');
 
@@ -423,17 +633,11 @@ function initBackToTop() {
         });
 
         backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 }
 
-/* --------------------------------------------------------------------------
-   11. Toast Notification System Utility
-   -------------------------------------------------------------------------- */
 function showToast(message, type = 'info') {
     const container = id('toastContainer');
     if (!container) return;
@@ -460,7 +664,6 @@ function showToast(message, type = 'info') {
     }, 3500);
 }
 
-/* Global Helper */
 function id(elementId) {
     return document.getElementById(elementId);
 }
