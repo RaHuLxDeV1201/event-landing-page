@@ -87,6 +87,26 @@ body.dark-theme {
     z-index: 9999;
 }
 
+/* Helper Utilities */
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.progress-79 {
+    width: 79%;
+}
+
+.speaker-talk-time {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.modal-footer-right {
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
 /* Reset & Basic Setup */
 * {
     margin: 0;
@@ -285,7 +305,6 @@ h6 {
     width: 100%;
 }
 
-/* Calendar Button */
 .btn-cal-link {
     background: none;
     border: none;
@@ -304,7 +323,6 @@ h6 {
     text-decoration: underline;
 }
 
-/* Badges */
 .badge {
     display: inline-flex;
     align-items: center;

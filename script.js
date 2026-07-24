@@ -44,7 +44,7 @@ function initTheme() {
 }
 
 /* --------------------------------------------------------------------------
-   2. Sticky Header & Scroll Spy
+   2. Sticky Header & Scroll-Spy Navigation
    -------------------------------------------------------------------------- */
 function initHeaderScroll() {
     const header = id('mainHeader');
@@ -89,16 +89,20 @@ function initMobileNav() {
     if (hamburgerBtn && navLinks) {
         hamburgerBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+            const isOpen = navLinks.classList.contains('active');
+            hamburgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
             const icon = hamburgerBtn.querySelector('i');
             if (icon) {
-                icon.classList.toggle('fa-bars');
-                icon.classList.toggle('fa-xmark');
+                icon.classList.toggle('fa-bars', !isOpen);
+                icon.classList.toggle('fa-xmark', isOpen);
             }
         });
 
         navLinks.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
                 const icon = hamburgerBtn.querySelector('i');
                 if (icon) {
                     icon.classList.add('fa-bars');
@@ -165,7 +169,7 @@ function initAgendaTabs() {
 }
 
 /* --------------------------------------------------------------------------
-   6. Event Filter Tabs & Live Search
+   6. Event Filter Tabs & Live Search Engine with Dynamic Count Updates
    -------------------------------------------------------------------------- */
 function initEventFilters() {
     const filterBtns = document.querySelectorAll('.filter-btn');
@@ -177,6 +181,31 @@ function initEventFilters() {
 
     let activeCategory = 'all';
     let searchQuery = '';
+
+    function updateBadgeCounts() {
+        let countAll = 0;
+        let countAi = 0;
+        let countWeb = 0;
+        let countHackathon = 0;
+
+        eventCards.forEach(card => {
+            const cardCategory = card.dataset.category;
+            const cardTitle = card.querySelector('h3').textContent.toLowerCase();
+            const cardDesc = card.querySelector('p').textContent.toLowerCase();
+
+            if (cardTitle.includes(searchQuery) || cardDesc.includes(searchQuery)) {
+                countAll++;
+                if (cardCategory === 'ai') countAi++;
+                if (cardCategory === 'web') countWeb++;
+                if (cardCategory === 'hackathon') countHackathon++;
+            }
+        });
+
+        if (id('countAll')) id('countAll').textContent = countAll;
+        if (id('countAi')) id('countAi').textContent = countAi;
+        if (id('countWeb')) id('countWeb').textContent = countWeb;
+        if (id('countHackathon')) id('countHackathon').textContent = countHackathon;
+    }
 
     function filterEvents() {
         let visibleCount = 0;
@@ -196,6 +225,8 @@ function initEventFilters() {
                 card.style.display = 'none';
             }
         });
+
+        updateBadgeCounts();
 
         if (noEventsMsg) {
             if (visibleCount === 0) {
@@ -254,6 +285,8 @@ function initEventFilters() {
             filterEvents();
         });
     }
+
+    updateBadgeCounts();
 }
 
 /* --------------------------------------------------------------------------
@@ -285,6 +318,38 @@ function initFaqAccordion() {
 let ticketQuantity = 1;
 let isDiscountApplied = false;
 
+function resetCalculatorState() {
+    ticketQuantity = 1;
+    isDiscountApplied = false;
+    if (id('ticketQty')) id('ticketQty').textContent = '1';
+    if (id('promoCode')) id('promoCode').value = '';
+    updatePrice();
+}
+
+function updatePrice() {
+    const trackSelect = id('selectedTrack');
+    if (!trackSelect) return;
+    const selectedOption = trackSelect.options[trackSelect.selectedIndex];
+    const baseUnitPrice = parseFloat(selectedOption?.dataset?.price || 299);
+
+    let subtotal = baseUnitPrice * ticketQuantity;
+    let discount = isDiscountApplied ? subtotal * 0.5 : 0;
+    let total = subtotal - discount;
+
+    if (id('basePriceText')) id('basePriceText').textContent = `$${subtotal.toFixed(2)}`;
+    if (id('discountText')) id('discountText').textContent = `-$${discount.toFixed(2)}`;
+    if (id('totalPriceText')) id('totalPriceText').textContent = `$${total.toFixed(2)}`;
+
+    const discountRow = id('discountRow');
+    if (discountRow) {
+        if (isDiscountApplied) {
+            discountRow.classList.remove('hidden');
+        } else {
+            discountRow.classList.add('hidden');
+        }
+    }
+}
+
 function initPriceCalculator() {
     const trackSelect = id('selectedTrack');
     const qtyMinusBtn = id('qtyMinusBtn');
@@ -292,29 +357,6 @@ function initPriceCalculator() {
     const qtySpan = id('ticketQty');
     const applyPromoBtn = id('applyPromoBtn');
     const promoInput = id('promoCode');
-
-    function updatePrice() {
-        if (!trackSelect) return;
-        const selectedOption = trackSelect.options[trackSelect.selectedIndex];
-        const baseUnitPrice = parseFloat(selectedOption.dataset.price || 299);
-
-        let subtotal = baseUnitPrice * ticketQuantity;
-        let discount = isDiscountApplied ? subtotal * 0.5 : 0;
-        let total = subtotal - discount;
-
-        if (id('basePriceText')) id('basePriceText').textContent = `$${subtotal.toFixed(2)}`;
-        if (id('discountText')) id('discountText').textContent = `-$${discount.toFixed(2)}`;
-        if (id('totalPriceText')) id('totalPriceText').textContent = `$${total.toFixed(2)}`;
-
-        const discountRow = id('discountRow');
-        if (discountRow) {
-            if (isDiscountApplied) {
-                discountRow.classList.remove('hidden');
-            } else {
-                discountRow.classList.add('hidden');
-            }
-        }
-    }
 
     if (trackSelect) trackSelect.addEventListener('change', updatePrice);
 
@@ -372,7 +414,7 @@ const speakerData = {
         role: 'VP of Engineering',
         company: 'CloudScale',
         avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80',
-        bio: 'Sarah Jenkins leads a global team of 200+ engineers building ultra-low-latency distributed edge ruff systems for real-time web streaming.',
+        bio: 'Sarah Jenkins leads a global engineering organization building ultra-low-latency distributed edge systems for real-time web application state.',
         talk: 'Modern Full-Stack Distributed Web',
         time: 'Oct 16, 2026 &bull; 02:00 PM EST &bull; Main Stage (Hall A)'
     },
@@ -422,7 +464,7 @@ function closeSpeakerModal() {
 }
 
 /* --------------------------------------------------------------------------
-   10. Add to Google Calendar Generator
+   10. Add to Google Calendar Link Generator
    -------------------------------------------------------------------------- */
 function addEventToCalendar(title, timeStr, locationStr) {
     const baseUrl = 'https://calendar.google.com/calendar/render';
@@ -444,11 +486,11 @@ function openModal(trackName = 'All Access Pass') {
     const modal = id('registrationModal');
     const trackSelect = id('selectedTrack');
 
+    resetCalculatorState();
+
     if (trackSelect && trackName) {
         trackSelect.value = trackName;
-        // Trigger price update event
-        const event = new Event('change');
-        trackSelect.dispatchEvent(event);
+        updatePrice();
     }
 
     if (modal) {
@@ -476,6 +518,7 @@ function closeModal() {
         }
         if (successBox) successBox.classList.add('hidden');
         clearErrors();
+        resetCalculatorState();
     }, 300);
 }
 
@@ -575,7 +618,7 @@ function triggerConfetti() {
         particles.forEach(p => {
             p.x += p.vx;
             p.y += p.vy;
-            p.vy += 0.25; // Gravity
+            p.vy += 0.25;
             p.rotation += p.rSpeed;
 
             ctx.save();
@@ -598,7 +641,7 @@ function triggerConfetti() {
 }
 
 /* --------------------------------------------------------------------------
-   13. Newsletter & Back to Top & Toast
+   13. Newsletter & Back to Top & Toast Engine
    -------------------------------------------------------------------------- */
 function initNewsletterForm() {
     const form = id('newsletterForm');
