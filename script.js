@@ -24,7 +24,7 @@ function initTheme() {
         themeToggleBtn.addEventListener('click', () => {
             document.body.classList.toggle('dark-theme');
             const isDark = document.body.classList.contains('dark-theme');
-
+            
             localStorage.setItem('nexustech_theme', isDark ? 'dark' : 'light');
             themeToggleBtn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
         });

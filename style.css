@@ -99,10 +99,8 @@ body {
     gap: 0.5rem;
 }
 
-.logo-img {
-    height: 36px;
-    width: auto;
-    object-fit: contain;
+.logo-icon {
+    color: var(--primary);
 }
 
 .logo span {
@@ -216,8 +214,8 @@ body {
 
 .gradient-text {
     background: linear-gradient(135deg, var(--primary), #a855f7);
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 

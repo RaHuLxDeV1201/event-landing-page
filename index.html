@@ -1,38 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Add in your <head> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexusTech 2026 | Global Tech & Developer Summit</title>
-
-    <!-- Add Favicon Here -->
-    <link rel="icon" type="image/svg+xml" href="assets/logo.svg?v=2">
-
     <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- FontAwesome Vector Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
     <!-- Sticky Glassmorphic Navbar -->
     <header class="header">
         <div class="nav-container">
             <a href="#home" class="logo">
-                <img src="assets/logo.png" alt="NexusTech Logo" class="logo-img"
-                    onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
-                <i class="fa-solid fa-bolt logo-icon"></i>
-                Nexus<span>Tech</span>
+                <i class="fa-solid fa-bolt logo-icon"></i> Nexus<span>Tech</span>
             </a>
-
+            
             <nav class="nav-links" id="navLinks">
                 <a href="#home" class="nav-link active">Home</a>
                 <a href="#about" class="nav-link">About</a>
@@ -55,7 +40,16 @@
         </div>
     </header>
 
-    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-badge"><i class="fa-solid fa-star"></i> Annual Flagship Summit 2026</div>
+            <h1 class="hero-title">Shaping the Future of <span class="gradient-text">Intelligence & Web</span></h1>
+            <p class="hero-subtitle">
+                Join 2,500+ developers, AI engineers, and industry pioneers for 3 action-packed days of keynotes, workshops, and high-stakes hackathons.
+            </p>
+            
             <!-- Live Event Countdown Timer -->
             <div class="countdown-card">
                 <p class="countdown-title">Summit Commences In:</p>
@@ -84,14 +78,10 @@
                     <span class="sub-heading">Who We Are</span>
                     <h2>Empowering Next-Generation Tech Creators</h2>
                     <p>
-                        NexusTech is a global event ecosystem dedicated to fostering cross-disciplinary technology
-                        collaboration. We connect emerging developers with world-renowned technical leaders to spark
-                        innovation.
+                        NexusTech is a global event ecosystem dedicated to fostering cross-disciplinary technology collaboration. We connect emerging developers with world-renowned technical leaders to spark innovation.
                     </p>
                     <p>
-                        Whether you are building advanced neural networks, high-throughput cloud microservices, or
-                        decentralized web platforms, NexusTech provides hands-on learning and direct networking
-                        opportunities.
+                        Whether you are building advanced neural networks, high-throughput cloud microservices, or decentralized web platforms, NexusTech provides hands-on learning and direct networking opportunities.
                     </p>
 
                     <!-- Key Platform Stats -->
@@ -113,8 +103,7 @@
 
                 <div class="about-visual">
                     <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80"
-                            alt="NexusTech Summit Conference Hall">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" alt="NexusTech Summit Conference Hall">
                         <div class="floating-badge">
                             <i class="fa-solid fa-trophy"></i>
                             <div>
@@ -156,8 +145,7 @@
                 <!-- Event Card 1 -->
                 <article class="event-card" data-category="ai">
                     <div class="card-thumb">
-                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80"
-                            alt="Generative AI">
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80" alt="Generative AI">
                         <span class="badge category-badge">Artificial Intelligence</span>
                     </div>
                     <div class="card-body">
@@ -166,12 +154,10 @@
                             <span><i class="fa-regular fa-clock"></i> 10:00 AM EST</span>
                         </div>
                         <h3>Generative AI & LLM Systems</h3>
-                        <p>Dive deep into multi-modal architectures, custom model fine-tuning, and scalable vector
-                            databases.</p>
+                        <p>Dive deep into multi-modal architectures, custom model fine-tuning, and scalable vector databases.</p>
                         <div class="card-footer">
                             <span class="speaker-tag"><i class="fa-solid fa-user-circle"></i> Dr. Aris Thorne</span>
-                            <button class="btn btn-card" onclick="openModal('Generative AI & LLM Systems')">Book
-                                Slot</button>
+                            <button class="btn btn-card" onclick="openModal('Generative AI & LLM Systems')">Book Slot</button>
                         </div>
                     </div>
                 </article>
@@ -179,8 +165,7 @@
                 <!-- Event Card 2 -->
                 <article class="event-card" data-category="web">
                     <div class="card-thumb">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80"
-                            alt="Full Stack">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" alt="Full Stack">
                         <span class="badge category-badge">Web & Cloud</span>
                     </div>
                     <div class="card-body">
@@ -189,12 +174,10 @@
                             <span><i class="fa-regular fa-clock"></i> 02:00 PM EST</span>
                         </div>
                         <h3>Modern Full-Stack Distributed Web</h3>
-                        <p>Learn reactive architecture, serverless computing, edge functions, and real-time state
-                            synchronization.</p>
+                        <p>Learn reactive architecture, serverless computing, edge functions, and real-time state synchronization.</p>
                         <div class="card-footer">
                             <span class="speaker-tag"><i class="fa-solid fa-user-circle"></i> Sarah Jenkins</span>
-                            <button class="btn btn-card" onclick="openModal('Modern Full-Stack Distributed Web')">Book
-                                Slot</button>
+                            <button class="btn btn-card" onclick="openModal('Modern Full-Stack Distributed Web')">Book Slot</button>
                         </div>
                     </div>
                 </article>
@@ -202,8 +185,7 @@
                 <!-- Event Card 3 -->
                 <article class="event-card" data-category="hackathon">
                     <div class="card-thumb">
-                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80"
-                            alt="Hackathon">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Hackathon">
                         <span class="badge category-badge">Hackathons</span>
                     </div>
                     <div class="card-body">
@@ -212,12 +194,10 @@
                             <span><i class="fa-regular fa-clock"></i> 24-Hour Blitz</span>
                         </div>
                         <h3>Global Developer 24hr Hackathon</h3>
-                        <p>Build innovative open-source solutions with a $50,000 prize pool judged by top industry VCs.
-                        </p>
+                        <p>Build innovative open-source solutions with a $50,000 prize pool judged by top industry VCs.</p>
                         <div class="card-footer">
                             <span class="speaker-tag"><i class="fa-solid fa-user-circle"></i> Nexus Jury Team</span>
-                            <button class="btn btn-card" onclick="openModal('Global Developer 24hr Hackathon')">Book
-                                Slot</button>
+                            <button class="btn btn-card" onclick="openModal('Global Developer 24hr Hackathon')">Book Slot</button>
                         </div>
                     </div>
                 </article>
@@ -225,8 +205,7 @@
                 <!-- Event Card 4 -->
                 <article class="event-card" data-category="web">
                     <div class="card-thumb">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80"
-                            alt="Cloud Infrastructure">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="Cloud Infrastructure">
                         <span class="badge category-badge">Web & Cloud</span>
                     </div>
                     <div class="card-body">
@@ -235,17 +214,15 @@
                             <span><i class="fa-regular fa-clock"></i> 11:30 AM EST</span>
                         </div>
                         <h3>Cloud Native & Kubernetes Resilience</h3>
-                        <p>Master Kubernetes, zero-trust container security, service meshes, and automated deployment
-                            pipelines.</p>
+                        <p>Master Kubernetes, zero-trust container security, service meshes, and automated deployment pipelines.</p>
                         <div class="card-footer">
                             <span class="speaker-tag"><i class="fa-solid fa-user-circle"></i> Marcus Vance</span>
-                            <button class="btn btn-card"
-                                onclick="openModal('Cloud Native & Kubernetes Resilience')">Book Slot</button>
+                            <button class="btn btn-card" onclick="openModal('Cloud Native & Kubernetes Resilience')">Book Slot</button>
                         </div>
                     </div>
                 </article>
             </div>
-
+            
             <div id="noEventsMsg" class="no-results hidden">
                 <i class="fa-solid fa-circle-exclamation"></i> No events match your search criteria.
             </div>
@@ -264,24 +241,21 @@
             <div class="speakers-grid">
                 <div class="speaker-card">
                     <div class="speaker-avatar">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
-                            alt="Speaker Dr. Aris Thorne">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Speaker Dr. Aris Thorne">
                     </div>
                     <h3>Dr. Aris Thorne</h3>
                     <p class="speaker-role">Lead AI Researcher, Synapse Labs</p>
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-avatar">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
-                            alt="Speaker Sarah Jenkins">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Speaker Sarah Jenkins">
                     </div>
                     <h3>Sarah Jenkins</h3>
                     <p class="speaker-role">VP of Engineering, CloudScale</p>
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-avatar">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80"
-                            alt="Speaker Marcus Vance">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Speaker Marcus Vance">
                     </div>
                     <h3>Marcus Vance</h3>
                     <p class="speaker-role">Principal Systems Architect, DevCore</p>
@@ -296,8 +270,7 @@
             <div class="contact-box">
                 <div class="contact-text">
                     <h2>Need Personalized Assistance?</h2>
-                    <p>Have questions about group tickets, student discounts, or booth sponsorships? Get in touch with
-                        our operations team.</p>
+                    <p>Have questions about group tickets, student discounts, or booth sponsorships? Get in touch with our operations team.</p>
                     <div class="contact-details">
                         <div><i class="fa-solid fa-envelope"></i> summit@nexustech2026.org</div>
                         <div><i class="fa-solid fa-phone"></i> +1 (800) 555-NEXUS</div>
@@ -357,7 +330,7 @@
                 <h3>Summit Ticket Registration</h3>
                 <p>Fill out your credentials below to reserve your slot.</p>
             </div>
-
+            
             <form id="registrationForm" class="registration-form" novalidate>
                 <div class="form-group">
                     <label for="fullName">Full Name <span class="required">*</span></label>
@@ -395,8 +368,7 @@
                             <option value="Generative AI & LLM Systems">Generative AI & LLM Systems</option>
                             <option value="Modern Full-Stack Distributed Web">Modern Full-Stack Distributed Web</option>
                             <option value="Global Developer 24hr Hackathon">Global Developer 24hr Hackathon</option>
-                            <option value="Cloud Native & Kubernetes Resilience">Cloud Native & Kubernetes Resilience
-                            </option>
+                            <option value="Cloud Native & Kubernetes Resilience">Cloud Native & Kubernetes Resilience</option>
                         </select>
                     </div>
                 </div>
@@ -417,5 +389,4 @@
     <!-- External Script -->
     <script src="script.js"></script>
 </body>
-
 </html>
