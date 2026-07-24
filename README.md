@@ -58,15 +58,15 @@ A modern, high-converting, and feature-rich event landing page designed and buil
 
 ## 🚀 Live Preview & Local Setup
 
-1. **Clone or Download** the repository:
+1. **Clone or Download the repository:**
    ```bash
    git clone https://github.com/your-username/event-landing-page.git
    ```
-2. Navigate to the project directory:
+2. **Navigate to the project directory:**
    ```bash
    cd event-landing-page
    ```
-3. Open `index.html` directly in any web browser or open with VS Code **Live Server**.
+3. **Open `index.html` directly in any web browser or open with VS Code** **Live Server**.
 
 ---
 
@@ -97,3 +97,7 @@ event-landing-page/
 ## 📄 License
 
 Distributed under the MIT License.
+<p align="center">
+  Engineered by <a href="https://github.com/RaHuLxDeV1201"><strong>RaHuLxDeV</strong></a>
+</p>
+
