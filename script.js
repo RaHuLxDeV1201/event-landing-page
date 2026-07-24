@@ -1,6 +1,6 @@
 /* ==========================================================================
    NexusTech 2026 - Main Interactive Engine Script
-   Designed for Machine Learning Centre of Excellence (MLCOE) Task Evaluation
+   Designed and Developed Independently
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -34,10 +34,10 @@ function initTheme() {
         themeToggleBtn.addEventListener('click', () => {
             document.body.classList.toggle('dark-theme');
             const isDark = document.body.classList.contains('dark-theme');
-
+            
             localStorage.setItem('nexustech_theme', isDark ? 'dark' : 'light');
             themeToggleBtn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
-
+            
             showToast(`Switched to ${isDark ? 'Dark' : 'Light'} Mode`, 'info');
         });
     }
@@ -91,7 +91,7 @@ function initMobileNav() {
             navLinks.classList.toggle('active');
             const isOpen = navLinks.classList.contains('active');
             hamburgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-
+            
             const icon = hamburgerBtn.querySelector('i');
             if (icon) {
                 icon.classList.toggle('fa-bars', !isOpen);
@@ -277,7 +277,7 @@ function initEventFilters() {
             searchQuery = '';
             if (searchInput) searchInput.value = '';
             if (clearSearchBtn) clearSearchBtn.classList.add('hidden');
-
+            
             filterBtns.forEach(b => {
                 b.classList.remove('active');
                 if (b.dataset.category === 'all') b.classList.add('active');
@@ -383,12 +383,12 @@ function initPriceCalculator() {
     if (applyPromoBtn) {
         applyPromoBtn.addEventListener('click', () => {
             const code = promoInput ? promoInput.value.trim().toUpperCase() : '';
-            if (code === 'MLCOE50' || code === 'NEXUS2026') {
+            if (code === 'NEXUS50' || code === 'NEXUS2026') {
                 isDiscountApplied = true;
                 updatePrice();
                 showToast('Promo Code Applied: 50% OFF!', 'success');
             } else {
-                showToast('Invalid promo code. Try MLCOE50', 'danger');
+                showToast('Invalid promo code. Try NEXUS50', 'danger');
             }
         });
     }
