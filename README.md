@@ -5,6 +5,8 @@
   <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Live_Demo-Visit_Website-0070F3?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Demo" />
   </a>
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/RaHuLxDeV1201/event-landing-page)
+
   
   <!-- Deployment Status Badge -->
   <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
