@@ -572,79 +572,103 @@
                 <div class="speakers-grid">
                     <!-- Speaker 1 -->
                     <div class="speaker-card" onclick="openSpeakerModal('aris')">
+                        <div class="speaker-card-header">
+                            <span class="speaker-topic-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Research</span>
+                        </div>
                         <div class="speaker-avatar">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=max&w=800&q=80"
-                                alt="Dr. Aris Thorne">
-                            <div class="speaker-socials">
-                                <a href="#" aria-label="Twitter" onclick="event.stopPropagation();"><i
-                                        class="fa-brands fa-x-twitter"></i></a>
-                                <a href="#" aria-label="LinkedIn" onclick="event.stopPropagation();"><i
-                                        class="fa-brands fa-linkedin"></i></a>
-                                <a href="#" aria-label="GitHub" onclick="event.stopPropagation();"><i
-                                        class="fa-brands fa-github"></i></a>
+                            <div class="avatar-ring">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&h=600&q=80"
+                                    alt="Dr. Aris Thorne">
                             </div>
                         </div>
                         <div class="speaker-content">
                             <h3>Dr. Aris Thorne</h3>
-                            <p class="speaker-role">Lead AI Researcher, Synapse AI</p>
-                            <p class="speaker-bio">Pioneer in self-reasoning agent architectures and synthetic training
-                                dataset alignment.</p>
-                            <button class="btn btn-outline btn-full"
-                                onclick="event.stopPropagation(); openSpeakerModal('aris')">
-                                <i class="fa-solid fa-id-card"></i> View Full Bio
-                            </button>
+                            <p class="speaker-role"><i class="fa-solid fa-building"></i> Synapse AI &bull; Lead Researcher</p>
+                            <p class="speaker-bio">Pioneer in self-reasoning agent architectures and synthetic training dataset alignment.</p>
+                            
+                            <div class="speaker-talk-pill">
+                                <i class="fa-solid fa-microphone-lines"></i>
+                                <span>Keynote: Generative AI & LLM Systems</span>
+                            </div>
+
+                            <div class="speaker-card-footer">
+                                <div class="speaker-socials-row">
+                                    <a href="#" aria-label="Twitter" onclick="event.stopPropagation();"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="#" aria-label="LinkedIn" onclick="event.stopPropagation();"><i class="fa-brands fa-linkedin"></i></a>
+                                    <a href="#" aria-label="GitHub" onclick="event.stopPropagation();"><i class="fa-brands fa-github"></i></a>
+                                </div>
+                                <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); openSpeakerModal('aris')">
+                                    <span>Profile</span> <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Speaker 2 -->
                     <div class="speaker-card" onclick="openSpeakerModal('sarah')">
+                        <div class="speaker-card-header">
+                            <span class="speaker-topic-badge"><i class="fa-solid fa-cloud-bolt"></i> Distributed Web</span>
+                        </div>
                         <div class="speaker-avatar">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=max&w=800&q=80"
-                                alt="Sarah Jenkins">
-                            <div class="speaker-socials">
-                                <a href="#" aria-label="Twitter" onclick="event.stopPropagation();"><i
-                                        class="fa-brands fa-x-twitter"></i></a>
-                                <a href="#" aria-label="LinkedIn" onclick="event.stopPropagation();"><i
-                                        class="fa-brands fa-linkedin"></i></a>
-                                <a href="#" aria-label="GitHub" onclick="event.stopPropagation();"><i
-                                        class="fa-brands fa-github"></i></a>
+                            <div class="avatar-ring">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&h=600&q=80"
+                                    alt="Sarah Jenkins">
                             </div>
                         </div>
                         <div class="speaker-content">
                             <h3>Sarah Jenkins</h3>
-                            <p class="speaker-role">VP of Engineering, CloudScale</p>
-                            <p class="speaker-bio">Spearheaded ultra-low-latency edge delivery serving 100M+ concurrent
-                                users.</p>
-                            <button class="btn btn-outline btn-full"
-                                onclick="event.stopPropagation(); openSpeakerModal('sarah')">
-                                <i class="fa-solid fa-id-card"></i> View Full Bio
-                            </button>
+                            <p class="speaker-role"><i class="fa-solid fa-building"></i> CloudScale &bull; VP Engineering</p>
+                            <p class="speaker-bio">Spearheaded ultra-low-latency edge delivery serving 100M+ concurrent users globally.</p>
+                            
+                            <div class="speaker-talk-pill">
+                                <i class="fa-solid fa-microphone-lines"></i>
+                                <span>Keynote: Distributed Web Architecture</span>
+                            </div>
+
+                            <div class="speaker-card-footer">
+                                <div class="speaker-socials-row">
+                                    <a href="#" aria-label="Twitter" onclick="event.stopPropagation();"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="#" aria-label="LinkedIn" onclick="event.stopPropagation();"><i class="fa-brands fa-linkedin"></i></a>
+                                    <a href="#" aria-label="GitHub" onclick="event.stopPropagation();"><i class="fa-brands fa-github"></i></a>
+                                </div>
+                                <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); openSpeakerModal('sarah')">
+                                    <span>Profile</span> <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Speaker 3 -->
                     <div class="speaker-card" onclick="openSpeakerModal('marcus')">
+                        <div class="speaker-card-header">
+                            <span class="speaker-topic-badge"><i class="fa-solid fa-cubes-stacked"></i> Cloud Native</span>
+                        </div>
                         <div class="speaker-avatar">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=max&w=800&q=80"
-                                alt="Marcus Vance">
-                            <div class="speaker-socials">
-                                <a href="#" aria-label="Twitter" onclick="event.stopPropagation();"><i
-                                        class="fa-brands fa-x-twitter"></i></a>
-                                <a href="#" aria-label="LinkedIn" onclick="event.stopPropagation();"><i
-                                        class="fa-brands fa-linkedin"></i></a>
-                                <a href="#" aria-label="GitHub" onclick="event.stopPropagation();"><i
-                                        class="fa-brands fa-github"></i></a>
+                            <div class="avatar-ring">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&h=600&q=80"
+                                    alt="Marcus Vance">
                             </div>
                         </div>
                         <div class="speaker-content">
                             <h3>Marcus Vance</h3>
-                            <p class="speaker-role">Principal Systems Architect, DevCore</p>
-                            <p class="speaker-bio">Expert in zero-trust mesh containerization and distributed Kubernetes
-                                observability.</p>
-                            <button class="btn btn-outline btn-full"
-                                onclick="event.stopPropagation(); openSpeakerModal('marcus')">
-                                <i class="fa-solid fa-id-card"></i> View Full Bio
-                            </button>
+                            <p class="speaker-role"><i class="fa-solid fa-building"></i> DevCore &bull; Principal Architect</p>
+                            <p class="speaker-bio">Expert in zero-trust mesh containerization and distributed Kubernetes observability.</p>
+                            
+                            <div class="speaker-talk-pill">
+                                <i class="fa-solid fa-microphone-lines"></i>
+                                <span>Keynote: Kubernetes & Cloud Security</span>
+                            </div>
+
+                            <div class="speaker-card-footer">
+                                <div class="speaker-socials-row">
+                                    <a href="#" aria-label="Twitter" onclick="event.stopPropagation();"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="#" aria-label="LinkedIn" onclick="event.stopPropagation();"><i class="fa-brands fa-linkedin"></i></a>
+                                    <a href="#" aria-label="GitHub" onclick="event.stopPropagation();"><i class="fa-brands fa-github"></i></a>
+                                </div>
+                                <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); openSpeakerModal('marcus')">
+                                    <span>Profile</span> <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
