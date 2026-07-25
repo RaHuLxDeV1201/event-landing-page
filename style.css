@@ -396,9 +396,20 @@ h6 {
     color: #ffffff !important;
 }
 
+.logo-text-wrapper {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+}
+
 .logo span,
 .brand-nexus {
     color: #ffffff !important;
+    font-weight: 800 !important;
+}
+
+.highlight {
+    color: #ff3b30 !important;
+    font-weight: 800 !important;
 }
 
 .logo-img {
@@ -407,10 +418,6 @@ h6 {
     border-radius: 10px;
     object-fit: contain;
     display: block;
-}
-
-.logo span .highlight {
-    color: #ff3b30 !important;
 }
 
 .nav-links {

@@ -33,20 +33,12 @@
 ## 📌 Table of Contents
 
 - [Overview](#-overview)
-<<<<<<< HEAD
-- [Key Features \& Capabilities](#-key-features--capabilities)
-- [Lighthouse Audit Scores](#-lighthouse-audit-scores)
-- [Project Structure](#-project-structure)
-- [Local Setup \& Development](#-local-setup--development)
-- [Asset Credits](#-asset-credits)
-=======
 - [Key Features & Capabilities](#-key-features--capabilities)
 - [Lighthouse Audit Metrics](#-lighthouse-audit-metrics)
 - [Interactive Component Highlights](#-interactive-component-highlights)
 - [Project Architecture](#-project-architecture)
 - [Local Setup & Quick Start](#-local-setup--quick-start)
 - [Third-Party Credits](#-third-party-credits)
->>>>>>> 59e441e (Upgrade README.md to ultra-professional level with feature matrix and code snippets)
 - [License](#-license)
 
 ---
@@ -99,18 +91,6 @@ Audited using **Google Lighthouse** to ensure maximum performance, accessibility
 
 ## 🛠️ Interactive Component Highlights
 
-<<<<<<< HEAD
-```text
-event-landing-page/
-├── assets/
-│   ├── logo.svg          # Vector brand mark
-│   └── favicon.ico       # Browser favicon asset
-├── index.html            # Semantic HTML5 document
-├── style.css             # Custom CSS design system & glassmorphism utilities
-├── script.js             # Vanilla JS ES6+ interactive engine
-├── README.md             # Project documentation
-└── LICENSE               # MIT License
-=======
 ### 🎟️ Promo Code Engine
 Enter promo code `NEXUS50` in the Pass Registration modal to apply an instant 50% discount:
 ```javascript
@@ -119,14 +99,10 @@ if (promoCode.trim().toUpperCase() === "NEXUS50") {
     discountRate = 0.5; // 50% discount
     showToast("Promo Code NEXUS50 Applied! (50% Off)", "success");
 }
->>>>>>> 59e441e (Upgrade README.md to ultra-professional level with feature matrix and code snippets)
 ```
----
-## 🚀Local Setup & Development
 
-<<<<<<< HEAD
-## Clone the Repository:
-=======
+---
+
 ## 📁 Project Architecture
 
 ```text
@@ -144,17 +120,12 @@ event-landing-page/
 ---
 
 ## 🚀 Local Setup & Quick Start
->>>>>>> 59e441e (Upgrade README.md to ultra-professional level with feature matrix and code snippets)
 
-Bash
-git clone [https://github.com/RaHuLxDeV1201/event-landing-page.git](https://github.com/RaHuLxDeV1201/event-landing-page.git)
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/RaHuLxDeV1201/event-landing-page.git
+   ```
 
-<<<<<<< HEAD
-## Navigate into the Project Folder:
-
-Bash
-cd event-landing-page
-=======
 2. **Navigate to the Project Folder:**
    ```bash
    cd event-landing-page
@@ -163,39 +134,25 @@ cd event-landing-page
 3. **Run the Application:**
    * Double-click `index.html` to open directly in any modern browser.
    * Or serve with VS Code **Live Server** extension.
->>>>>>> 59e441e (Upgrade README.md to ultra-professional level with feature matrix and code snippets)
 
-## Launch the Application:
+---
 
-Open index.html directly in any web browser.
-
-Or run with VS Code Live Server extension.
-
-<<<<<<< HEAD
-## 🛠️ Asset Credits
-## Typography: Google Fonts (Outfit & Plus Jakarta Sans)
-
-## Vector Icons: FontAwesome 6.4 CDN
-=======
 ## 🎨 Third-Party Credits
 
 * **Typography:** [Google Fonts](https://fonts.google.com/) (`Outfit` & `Plus Jakarta Sans`)
 * **Vector Icons:** [FontAwesome 6.4 CDN](https://cdnjs.cloudflare.com)
 * **Stock Photography:** High-resolution developer imagery provided by [Unsplash](https://unsplash.com)
->>>>>>> 59e441e (Upgrade README.md to ultra-professional level with feature matrix and code snippets)
 
-## Stock Media: High-resolution developer photography provided by Unsplash
+---
 
 ## 📄 License
-## Distributed under the MIT License.
 
-<<<<<<< HEAD
-## Key Corrections
-* **Sanitized Invisible Formatting:** Removed all invisible unicode non-breaking space characters (\u00A0) that were breaking markdown code block rendering and standard line indents.
-=======
 Distributed under the **MIT License**. See `LICENSE` for full details.
->>>>>>> 59e441e (Upgrade README.md to ultra-professional level with feature matrix and code snippets)
 
-* **Badge Target Link Fix:** Pointed the GitHub badge directly to the repository root [https://github.com/RaHuLxDev1201/event-landing-page](https://github.com/RaHuLxDev1201/event-landing-page) instead of append-linking #top to the repo URL.
+<p align="center">
+  <a href="#top"><strong>⬆ Back to Top</strong></a>
+</p>
 
-* **Standardized Anchor Slugs:**  Aligned the Table of Contents link targets with GitHub Flavored Markdown heading slug standards.
+<p align="center">
+  Engineered by <a href="https://github.com/RaHuLxDeV1201"><strong>RaHuLxDeV</strong></a>
+</p>
