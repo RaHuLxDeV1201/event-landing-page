@@ -1,5 +1,5 @@
-<div align="center">
-<h1>🚀 ⚡ NexusTech 2026 - Global Tech & Developer Summit</h1>
+## <div align="center">
+## <h1>🚀NexusTech 2026 - Global Tech & Developer Summit</h1>
 <p>A modern, high-converting, and feature-rich event landing page built from scratch using pure HTML5, CSS3, and Vanilla JavaScript.</p>
 <!-- Live Demo Badge Link -->
   <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
