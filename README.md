@@ -48,20 +48,22 @@ A modern, high-converting, and feature-rich event landing page designed and buil
   <br /><br />
 
   <!-- Lighthouse Audit Scores -->
-    <img src="https://img.shields.io/badge/Performance-97%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Performance: 97%" />
-  </a>
-  <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/Accessibility-93%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Accessibility: 93%" />
-  </a>
-  <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/Best_Practices-100%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Best Practices: 100%" />
-  </a>
-  <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/SEO-100%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="SEO: 100%" />
-  </a>
-</div
+  <div align="center">
+    <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.shields.io/badge/Performance-97%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Performance: 97%" />
+    </a>
+    <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.shields.io/badge/Accessibility-93%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Accessibility: 93%" />
+    </a>
+    <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.shields.io/badge/Best_Practices-100%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Best Practices: 100%" />
+    </a>
+    <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.shields.io/badge/SEO-100%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="SEO: 100%" />
+    </a>
+  </div>
 
-**🚀 Live Preview & Local Setup**
+## 🚀 Live Preview & Local Setup
 
 1. **Clone or Download the repository:**
    ```bash
@@ -71,7 +73,7 @@ A modern, high-converting, and feature-rich event landing page designed and buil
    ```bash
    cd event-landing-page
    ```
-3. **Open `index.html` directly in any web browser or open with VS Code** **Live Server**.
+3. **Open `index.html` directly in any web browser or with VS Code Live Server.**
 
 ---
 
