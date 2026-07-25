@@ -56,7 +56,7 @@ A modern, high-converting, and feature-rich event landing page designed and buil
   </a>
 </div
 
-## 🚀 Live Preview & Local Setup
+**🚀 Live Preview & Local Setup**
 
 1. **Clone or Download the repository:**
    ```bash
