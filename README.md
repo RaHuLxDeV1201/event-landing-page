@@ -15,9 +15,7 @@
   <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/⚡_Status-Active_Production-10B981?style=for-the-badge" alt="Status" />
   </a>
-
   <br /><br />
-
   <!-- Technology Badges -->
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
@@ -25,9 +23,7 @@
   <img src="https://img.shields.io/badge/Design-Glassmorphism-6366F1?style=for-the-badge" alt="Glassmorphism" />
   <img src="https://img.shields.io/badge/Dependencies-Zero-10B981?style=for-the-badge" alt="Zero Dependencies" />
 </div>
-
 ---
-
 ## 📌 Table of Contents
 
 - [Overview](#-overview)
