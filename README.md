@@ -81,9 +81,9 @@ Audited using **Google Lighthouse** to ensure maximum performance, accessibility
   <img src="https://img.shields.io/badge/Best_Practices-100%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Best Practices" />
   <img src="https://img.shields.io/badge/SEO-100%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="SEO" />
 </div>
----
 
-## 🛠️ Interactive Component Highlights
+---
+### 🛠️ Interactive Component Highlights
 
 ### 🎟️ Promo Code Engine
 Enter promo code `NEXUS50` in the Pass Registration modal to apply an instant 50% discount:
