@@ -23,6 +23,7 @@
   <img src="https://img.shields.io/badge/Design-Glassmorphism-6366F1?style=for-the-badge" alt="Glassmorphism" />
   <img src="https://img.shields.io/badge/Dependencies-Zero-10B981?style=for-the-badge" alt="Zero Dependencies" />
 </div>
+
 ---
 ## 📌 Table of Contents
 
