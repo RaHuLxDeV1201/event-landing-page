@@ -413,7 +413,7 @@ const speakerData = {
         name: 'Sarah Jenkins',
         role: 'VP of Engineering',
         company: 'CloudScale',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
+        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80',
         bio: 'Sarah Jenkins leads a global engineering organization building ultra-low-latency distributed edge systems for real-time web application state.',
         talk: 'Modern Full-Stack Distributed Web',
         time: 'Oct 16, 2026 &bull; 02:00 PM EST &bull; Main Stage (Hall A)'
@@ -422,7 +422,7 @@ const speakerData = {
         name: 'Marcus Vance',
         role: 'Principal Systems Architect',
         company: 'DevCore',
-        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80',
+        avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80',
         bio: 'Marcus Vance is a prolific open-source maintainer and creator of container security mesh tools deployed across Fortune 500 clouds.',
         talk: 'Cloud Native & Kubernetes Resilience',
         time: 'Oct 16, 2026 &bull; 11:30 AM EST &bull; Cloud Room 201'
