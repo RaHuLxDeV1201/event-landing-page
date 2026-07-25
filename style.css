@@ -393,9 +393,11 @@ h6 {
 }
 
 .logo-img {
-    height: 32px;
-    width: auto;
-    display: block
+    height: 34px;
+    width: 34px;
+    border-radius: 8px;
+    object-fit: contain;
+    display: block;
 }
 
 .logo span .highlight {
