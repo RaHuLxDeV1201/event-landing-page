@@ -5,19 +5,20 @@
   <h1>🚀 NexusTech 2026</h1>
   <h3>Global Tech & Developer Summit — Premier Event Landing Page</h3>
 
+
   <p>A modern, high-converting, and feature-rich web application built from scratch using pure HTML5, CSS3, and Vanilla JavaScript (ES6+).</p>
 
   <!-- Primary Action Badges -->
   <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/🌐_Live_Website-Visit_Demo-0070F3?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Website" />
   </a>
-  <a href="https://github.com/RaHuLxDeV1201/event-landing-page#top">
+  <a href="https://github.com/RaHuLxDeV1201/event-landing-page" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/💻_GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository" />
   </a>
   <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/⚡_Status-Active_Production-10B981?style=for-the-badge" alt="Status" />
   </a>
-  
+
   <br /><br />
 
   <!-- Technology Badges -->
