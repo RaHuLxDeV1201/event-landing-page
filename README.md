@@ -1,13 +1,9 @@
 <a id="top"></a>
-
 <div align="center">
   <img src="assets/logo.svg" alt="NexusTech Logo" width="90" height="90" />
   <h1>🚀 NexusTech 2026</h1>
   <h3>Global Tech & Developer Summit — Premier Event Landing Page</h3>
-
-
   <p>A modern, high-converting, and feature-rich web application built from scratch using pure HTML5, CSS3, and Vanilla JavaScript (ES6+).</p>
-
   <!-- Primary Action Badges -->
   <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/🌐_Live_Website-Visit_Demo-0070F3?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Website" />
@@ -88,7 +84,6 @@ Audited using **Google Lighthouse** to ensure maximum performance, accessibility
   <img src="https://img.shields.io/badge/Best_Practices-100%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Best Practices" />
   <img src="https://img.shields.io/badge/SEO-100%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="SEO" />
 </div>
-
 ---
 
 ## 🛠️ Interactive Component Highlights
