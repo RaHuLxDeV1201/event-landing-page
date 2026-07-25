@@ -1,15 +1,31 @@
-# ⚡ NexusTech 2026 - Global Tech & Developer Summit
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Responsive](https://img.shields.io/badge/Design-Responsive-10B981?style=for-the-badge)
-![Theme](https://img.shields.io/badge/Dark%20%2F%20Light-Supported-6366F1?style=for-the-badge)
-
-A modern, high-converting, and feature-rich event landing page designed and built independently from scratch. This web application showcases advanced frontend design systems, glassmorphism aesthetics, responsive layouts, and interactive Vanilla JavaScript features without relying on external frameworks.
+<div align="center">
+<h1>🚀 ⚡ NexusTech 2026 - Global Tech & Developer Summit</h1>
+<p>A modern, high-converting, and feature-rich event landing page built from scratch using pure HTML5, CSS3, and Vanilla JavaScript.</p>
+<!-- Live Demo Badge Link -->
+  <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Live_Demo-Visit_Website-0070F3?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Demo" />
+  </a>
+  
+  <!-- Deployment Status Badge -->
+  <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Status-Active-10B981?style=for-the-badge" alt="Status" />
+  </a>
+  <br /><br />
+  <!-- Tech Stack Badges -->
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Design-Responsive-10B981?style=for-the-badge" alt="Responsive" />
+  <img src="https://img.shields.io/badge/Theme-Dark%20%2F%20Light-6366F1?style=for-the-badge" alt="Theme Support" />
+</div>
 
 ---
 
+## 📖 About The Project
+
+A modern, high-converting, and feature-rich event landing page designed and built independently from scratch. This web application showcases advanced frontend design systems, glassmorphism aesthetics, responsive layouts, and interactive Vanilla JavaScript features without relying on external frameworks.
+
+🌐 **Live Website:** [rahulxdev1201.github.io/event-landing-page](https://rahulxdev1201.github.io/event-landing-page/)
 ## 📌 Features & Capabilities
 
 - 🌙 **Dark & Light Mode Theme Switcher**: Persisted automatically in `localStorage`.
@@ -24,20 +40,33 @@ A modern, high-converting, and feature-rich event landing page designed and buil
 - ❓ **FAQ Accordion**: Smooth expanding questions and answers.
 - 📝 **Real-Time Form Validation**: Regex validation for Full Name, Work Email, and Phone Number with error handling.
 - 🔔 **Toast Notification System**: Animated system notifications.
+  <br /><br />
 
----
+  <!-- Lighthouse Audit Scores -->
+    <img src="https://img.shields.io/badge/Performance-97%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Performance: 97%" />
+  </a>
+  <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Accessibility-93%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Accessibility: 93%" />
+  </a>
+  <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Best_Practices-100%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Best Practices: 100%" />
+  </a>
+  <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/SEO-100%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="SEO: 100%" />
+  </a>
+</div
 
 ## 🚀 Live Preview & Local Setup
 
-1. **Clone or Download** the repository:
+1. **Clone or Download the repository:**
    ```bash
    git clone https://github.com/your-username/event-landing-page.git
    ```
-2. Navigate to the project directory:
+2. **Navigate to the project directory:**
    ```bash
    cd event-landing-page
    ```
-3. Open `index.html` directly in any web browser or open with VS Code **Live Server**.
+3. **Open `index.html` directly in any web browser or open with VS Code** **Live Server**.
 
 ---
 
@@ -68,3 +97,7 @@ event-landing-page/
 ## 📄 License
 
 Distributed under the MIT License.
+<p align="center">
+  Engineered by <a href="https://github.com/RaHuLxDeV1201"><strong>RaHuLxDeV</strong></a>
+</p>
+
