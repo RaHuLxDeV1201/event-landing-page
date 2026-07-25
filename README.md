@@ -80,7 +80,7 @@ Audited using **Google Lighthouse** to ensure maximum performance, accessibility
 | ✅ **Best Practices** | **100 / 100** | 🟢 Passed | Semantic HTML5 tags, zero console warnings, valid markup |
 | 🔍 **SEO** | **100 / 100** | 🟢 Passed | Structured OpenGraph metadata, crawlable heading hierarchy |
 
-<div align="center">
+<div align="left">
   <img src="https://img.shields.io/badge/Performance-97%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Performance" />
   <img src="https://img.shields.io/badge/Accessibility-93%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Accessibility" />
   <img src="https://img.shields.io/badge/Best_Practices-100%25-0CCE6B?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Best Practices" />
