@@ -25,7 +25,10 @@ function initTheme() {
     const themeToggleBtn = document.getElementById('themeToggle');
     const savedTheme = localStorage.getItem('nexustech_theme');
 
-    if (savedTheme === 'dark') {
+    if (savedTheme === 'light') {
+        document.body.classList.remove('dark-theme');
+        if (themeToggleBtn) themeToggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    } else {
         document.body.classList.add('dark-theme');
         if (themeToggleBtn) themeToggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
     }
