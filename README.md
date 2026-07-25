@@ -1,18 +1,20 @@
+<a id="top"></a>
+
 <div align="center">
-<h1>🚀NexusTech 2026 - Global Tech & Developer Summit</h1>
+<h1>🚀 NexusTech 2026 - Global Tech & Developer Summit</h1>
 <p>A modern, high-converting, and feature-rich event landing page built from scratch using pure HTML5, CSS3, and Vanilla JavaScript.</p>
 <!-- Live Demo Badge Link -->
   <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Live_Demo-Visit_Website-0070F3?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Demo" />
   </a>
-  <a href="https://github.com/RaHuLxDeV1201/event-landing-page" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository">
-</a>
+  <a href="https://github.com/RaHuLxDeV1201/event-landing-page#top">
+    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository">
+  </a>
   
- <!-- Deployment Status Badge -->
-<a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.shields.io/badge/Deployment-Active-10B981?style=for-the-badge&logo=githubpages&logoColor=white" alt="Deployment Status: Active" />
-</a>
+  <!-- Deployment Status Badge -->
+  <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Deployment-Active-10B981?style=for-the-badge&logo=githubpages&logoColor=white" alt="Deployment Status: Active" />
+  </a>
   <br /><br />
   <!-- Tech Stack Badges -->
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
@@ -63,7 +65,7 @@ A modern, high-converting, and feature-rich event landing page designed and buil
 
 1. **Clone or Download the repository:**
    ```bash
-   git clone https://github.com/your-username/event-landing-page.git
+   git clone https://github.com/RaHuLxDeV1201/event-landing-page.git
    ```
 2. **Navigate to the project directory:**
    ```bash
@@ -100,6 +102,11 @@ event-landing-page/
 ## 📄 License
 
 Distributed under the MIT License.
+
+<p align="center">
+  <a href="#top"><strong>⬆ Back to Top</strong></a>
+</p>
+
 <p align="center">
   Engineered by <a href="https://github.com/RaHuLxDeV1201"><strong>RaHuLxDeV</strong></a>
 </p>
