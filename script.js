@@ -404,7 +404,7 @@ const speakerData = {
         name: 'Dr. Aris Thorne',
         role: 'Lead AI Researcher',
         company: 'Synapse AI',
-        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80',
+        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
         bio: 'Dr. Aris Thorne has authored 20+ top-cited papers on autonomous transformer agent architectures and synthetic training dataset alignment.',
         talk: 'Generative AI & LLM Systems',
         time: 'Oct 15, 2026 &bull; 10:00 AM EST &bull; Main Stage (Hall A)'
@@ -413,7 +413,7 @@ const speakerData = {
         name: 'Sarah Jenkins',
         role: 'VP of Engineering',
         company: 'CloudScale',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80',
+        avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80',
         bio: 'Sarah Jenkins leads a global engineering organization building ultra-low-latency distributed edge systems for real-time web application state.',
         talk: 'Modern Full-Stack Distributed Web',
         time: 'Oct 16, 2026 &bull; 02:00 PM EST &bull; Main Stage (Hall A)'
@@ -422,7 +422,7 @@ const speakerData = {
         name: 'Marcus Vance',
         role: 'Principal Systems Architect',
         company: 'DevCore',
-        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80',
+        avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=800&q=80',
         bio: 'Marcus Vance is a prolific open-source maintainer and creator of container security mesh tools deployed across Fortune 500 clouds.',
         talk: 'Cloud Native & Kubernetes Resilience',
         time: 'Oct 16, 2026 &bull; 11:30 AM EST &bull; Cloud Room 201'
