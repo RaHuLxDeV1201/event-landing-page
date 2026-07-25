@@ -88,3 +88,39 @@ event-landing-page/
 ├── script.js             # Vanilla JS ES6+ interactive engine
 ├── README.md             # Project documentation
 └── LICENSE               # MIT License
+```
+---
+## 🚀Local Setup & Development
+
+## Clone the Repository:
+
+Bash
+git clone [https://github.com/RaHuLxDeV1201/event-landing-page.git](https://github.com/RaHuLxDeV1201/event-landing-page.git)
+
+## Navigate into the Project Folder:
+
+Bash
+cd event-landing-page
+
+## Launch the Application:
+
+Open index.html directly in any web browser.
+
+Or run with VS Code Live Server extension.
+
+## 🛠️ Asset Credits
+## Typography: Google Fonts (Outfit & Plus Jakarta Sans)
+
+## Vector Icons: FontAwesome 6.4 CDN
+
+## Stock Media: High-resolution developer photography provided by Unsplash
+
+## 📄 License
+## Distributed under the MIT License.
+
+## Key Corrections
+* **Sanitized Invisible Formatting:** Removed all invisible unicode non-breaking space characters (\u00A0) that were breaking markdown code block rendering and standard line indents.
+
+* **Badge Target Link Fix:** Pointed the GitHub badge directly to the repository root [https://github.com/RaHuLxDev1201/event-landing-page](https://github.com/RaHuLxDev1201/event-landing-page) instead of append-linking #top to the repo URL.
+
+* **Standardized Anchor Slugs:**  Aligned the Table of Contents link targets with GitHub Flavored Markdown heading slug standards.
