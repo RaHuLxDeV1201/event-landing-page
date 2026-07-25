@@ -12,9 +12,10 @@
   <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/🌐_Live_Website-Visit_Demo-0070F3?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Website" />
   </a>
-  <a href="https://github.com/RaHuLxDeV1201/event-landing-page" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/💻_GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository" />
-  </a>
+<!-- GitHub Repository Badge -->
+<a href="https://github.com/RaHuLxDeV1201/event-landing-page" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository" />
+</a>
   <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/⚡_Status-Active_Production-10B981?style=for-the-badge" alt="Status" />
   </a>
