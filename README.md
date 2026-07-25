@@ -9,10 +9,10 @@
   <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository">
 </a>
   
-  <!-- Deployment Status Badge -->
-  <a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/Status-Active-10B981?style=for-the-badge" alt="Status" />
-  </a>
+ <!-- Deployment Status Badge -->
+<a href="https://rahulxdev1201.github.io/event-landing-page/" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/badge/Deployment-Active-10B981?style=for-the-badge&logo=githubpages&logoColor=white" alt="Deployment Status: Active" />
+</a>
   <br /><br />
   <!-- Tech Stack Badges -->
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
