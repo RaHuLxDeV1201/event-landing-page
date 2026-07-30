@@ -7,7 +7,7 @@
   </a>
 
 ---
-## 📌 Table of Contents
+## Table of Contents
 
 - [Overview](#-overview)
 - [Key Features & Capabilities](#-key-features--capabilities)
@@ -20,7 +20,7 @@
 
 ---
 
-## 📖 Overview
+##  Overview
 
 **NexusTech 2026** is a state-of-the-art event landing page designed to maximize conversions for tech summits, global developer conferences, and hackathons. Engineered with zero framework overhead, the application delivers fluid glassmorphism visual aesthetics, dynamic itemized pricing calculations, 1-click Google Calendar integration, and multi-tier schedule filtering.
 
